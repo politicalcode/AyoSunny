@@ -43,6 +43,7 @@ public abstract class TmplBaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         try {
             onCreateSilence(savedInstanceState);
         }catch (Exception e){
@@ -67,7 +68,7 @@ public abstract class TmplBaseActivity extends AppCompatActivity {
             bundle = BundleManager.getDefault().getBundle(bundleId);
             BundleManager.getDefault().removeBundle(bundleId);
         }
-        super.onCreate(savedInstanceState);
+
         attacher.onCreate(savedInstanceState);
 
         ///how to get an attacher
