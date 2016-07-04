@@ -36,24 +36,33 @@ import java.io.Serializable;
  */
 public abstract class ActivityAttacher implements Serializable{
 
+    public abstract class OnResultCallBack implements Serializable{
+        public abstract void onResult(Object t);
+    }
+
     public static final int LAUNCH_MODE_STANDARD = 1;
     public static final int LAUNCH_MODE_SINGLE_TASK = 2;
     public static final int LAUNCH_MODE_SINGLE_TOP = 3;
     public static final int LAUNCH_MODE_SINGLE_INSTANCE = 4;
 
-    public static void startActivity(Context context, Class<? extends ActivityAttacher> attacherClazz){
-        startActivity(context, attacherClazz, SimpleBundle.EMPTY, false, LAUNCH_MODE_STANDARD);
+    public static void startActivity(Context context, Class<? extends ActivityAttacher> attacherClazz, OnResultCallBack onResultCallBack){
+        startActivity(context, attacherClazz, SimpleBundle.EMPTY, false, LAUNCH_MODE_STANDARD, onResultCallBack);
     }
 
-    public static void startActivity(Context context, Class<? extends ActivityAttacher> attacherClazz, SimpleBundle bundle){
-        startActivity(context, attacherClazz, bundle, false, LAUNCH_MODE_STANDARD);
+    public static void startActivity(Context context, Class<? extends ActivityAttacher> attacherClazz){
+        startActivity(context, attacherClazz, SimpleBundle.EMPTY, false, LAUNCH_MODE_STANDARD, null);
+    }
+
+    public static void startActivity(Context context, Class<? extends ActivityAttacher> attacherClazz, SimpleBundle bundle, OnResultCallBack onResultCallBack){
+        startActivity(context, attacherClazz, bundle, false, LAUNCH_MODE_STANDARD, onResultCallBack);
     }
 
     public static void startActivity(Context context,
                                      Class<? extends ActivityAttacher> attacherClazz,
                                      SimpleBundle bundle,
                                      boolean needNewStack,
-                                     int launchMode)
+                                     int launchMode,
+                                     OnResultCallBack onResultCallBack)
     {
         Class<?> activityClass = null;
         if(launchMode == LAUNCH_MODE_STANDARD){
@@ -83,6 +92,8 @@ public abstract class ActivityAttacher implements Serializable{
         int bundleId = BundleManager.getDefault().addBundle(bundle);
         intent.putExtra("bundleId", bundleId);
 
+        if(onResultCallBack != null) bundle.putExtra("callback1122334", onResultCallBack);
+
         context.startActivity(intent);
 
     }
@@ -108,6 +119,20 @@ public abstract class ActivityAttacher implements Serializable{
 
     public FragmentManager getSupportFragmentManager() {
         return this.activity.getSupportFragmentManager();
+    }
+
+
+    protected OnResultCallBack getResultCallback(){
+        if(getIntent().hasExtra("callback1122334")){
+            OnResultCallBack onResultCallBack = getIntent().getExtra("callback1122334");
+            return onResultCallBack;
+        }else{
+            return null;
+        }
+    }
+
+    protected boolean hasResultCallback(){
+        return getIntent().hasExtra("callback1122334");
     }
 
     ///-------------------

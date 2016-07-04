@@ -19,6 +19,7 @@ import com.ayoview.notifysample.DialogDemoActivity;
 import com.ayoview.sample.deepmind.DemoCustomMenuActivity;
 import com.ayoview.sample.drawable.DemoDrawableActivity;
 import com.ayoview.sample.indicator.SimpleHomeActivity;
+import com.ayoview.sample.resource.Layout_Dp_Calculator;
 import com.ayoview.sample.tmpl_listview.TmplListActivity;
 import com.ayoview.sample.tmpl_pagegroup.DemoMainActivity;
 import com.ayoview.sample.tmpl_recycler_adapter.AdapterDelegateDemo;
@@ -103,6 +104,7 @@ public class Config{
                 menuItem3.addLeaf(new Leaf("Activity全解析", "", null));
                 menuItem3.addLeaf(new Leaf("Fragment全解析", "", null));
                 menuItem3.addLeaf(new Leaf("Drawable系列", "", DemoDrawableActivity.class));
+                menuItem3.addLeaf(new Leaf("Drawable：自定义", "", DemoCustomMenuActivity.class));
                 menuItem3.addLeaf(new Leaf("TextView：显示系列", "", TextViewDemoActivity.class));
                 menuItem3.addLeaf(new Leaf("EditText：输入系列", "", TextViewDemoActivity.class));
                 menuItem3.addLeaf(new Leaf("Button：点击系列", "", ButtonDemoActivity.class));
@@ -113,7 +115,8 @@ public class Config{
                 menuItem3.addLeaf(new Leaf("表单系列", "", null));
                 menuItem3.addLeaf(new Leaf("布局", "", LayoutDemoActivity.class));
                 menuItem3.addLeaf(new Leaf("列表", "", UltraDemoActivityAttacher.class));
-                menuItem3.addLeaf(new Leaf("自定义Drawable和View", "", DemoCustomMenuActivity.class));
+                menuItem3.addLeaf(new Leaf("资源扫描器和适配", "", Layout_Dp_Calculator.class));
+
             }
 
             MenuItem menuItem4 = new MenuItem("提示", R.drawable.weixin_normal, R.drawable.weixin_pressed);

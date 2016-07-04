@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+
+    <TextView
+        android:id="@+id/tv_dpi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自撰一良方，服之，卒" />
+    
+    <TextView
+        android:id="@+id/tv_width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"
+        android:text="等设置宽度" />
+    
+    <TextView
+        android:id="@+id/tv_bg1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_hdpi_65x65"
+        android:text="" />
+    
+    <TextView
+        android:id="@+id/tv_bg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_xdpi_65x65"
+        android:text="" />
+	
+    <TextView
+        android:id="@+id/tv_bg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_xxdpi_65x65"
+        android:text="" />
+    
+</LinearLayout>
