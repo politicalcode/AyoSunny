@@ -7,6 +7,7 @@ import com.ayo.opensource.zlikeview.LikeViewMainActivity;
 import com.ayo.opensource.zlikeview2.LikeView2MainActivity;
 import com.ayo.opensource.zmathview.MathViewMainActivity;
 import com.ayo.opensource.zpartial_explode.PartialExplodeMainActivity;
+import com.ayo.sample.sdk.DemoContactActivity;
 import com.ayo.sample.xml.DemoXmlActivity;
 import com.ayo.sample.zasync.AsyncDemoActivity;
 import com.ayo.sample.zdatabase.XUtilsDBDemoActivity;
@@ -79,6 +80,7 @@ public class Config{
                 menuItem1.addLeaf(new Leaf("多进程", "", AsyncDemoActivity.class));
                 menuItem1.addLeaf(new Leaf("缓存", "", null));
                 menuItem1.addLeaf(new Leaf("事件总线", "", EventBusDemoActivity.class));
+                menuItem1.addLeaf(new Leaf("安卓：联系人", "", DemoContactActivity.class));
 
             }
 
