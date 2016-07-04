@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".V_Button" >
+
+    <!-- 定义一个ViewSwitcer组件：因为一屏放不下要放的东西，所以用ViewSwitcher来管理 -->
+	<ViewSwitcher 
+	    android:id="@+id/viewSwitcher"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    ></ViewSwitcher>
+
+	<!-- 滚动到上一屏 -->
+	<Button 
+	    android:id="@+id/btn_prev"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:onClick="prev"
+	    android:text="&lt;"
+	    />
+	<!-- 滚动到下一屏 -->
+	<Button 
+	    android:id="@+id/btn_next"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentRight="true"
+	    android:onClick="next"
+	    android:text="&gt;"
+	    />
+	
+</RelativeLayout>

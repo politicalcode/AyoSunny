@@ -1,4 +1,4 @@
-package com.ayoview.sample.resource;
+package com.example.views;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,13 +18,12 @@ public class SBViewUtils {
 		Display dp = wm.getDefaultDisplay();
 		DisplayMetrics dm = new DisplayMetrics();
 		dp.getMetrics(dm);
-		if(dm.densityDpi == 120) return "ldpi--" + dm.densityDpi;
-		if(dm.densityDpi == 160) return "mdpi--" + dm.densityDpi;
-		if(dm.densityDpi == 240) return "hdpi--" + dm.densityDpi;
-		if(dm.densityDpi == 320) return "xhdpi--" + dm.densityDpi;
-		if(dm.densityDpi == 480) return "xxhdpi--" + dm.densityDpi;
-		if(dm.densityDpi == 480) return "xxxhdpi--" + dm.densityDpi;
-		return "超大屏幕--" + dm.densityDpi;
+		if(dm.densityDpi == 120) return "ldpi";
+		if(dm.densityDpi == 160) return "mdpi";
+		if(dm.densityDpi == 240) return "hdpi";
+		if(dm.densityDpi == 320) return "xhdpi";
+		if(dm.densityDpi == 480) return "xxhdpi";
+		return "诡异屏幕";
 	}
 	public static int getDpi(Activity activity){
 		WindowManager wm = activity.getWindowManager();

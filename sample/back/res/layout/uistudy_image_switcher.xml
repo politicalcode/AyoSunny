@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".V_Button" >
+
+  <!-- ImageSwitcher: 
+  	——相当于ImageViewer，但是提供图片切换时的动画效果，比较炫
+  	——用法也很简单，就是imageViewer.setImageDrawable(), setImageResource, setImageURI
+  	
+  	——ImageSwitcher继承自ViewSwticher
+  	——还有一个ViewFlipper类，提供了自动播放View的功能（startFlipping），
+  		继承自ViewAnimation，所以也有showPrevious, showNext的功能
+   -->
+
+	<ImageSwitcher
+	    android:layout_width="300dp"
+	    android:layout_height="300dp"
+	    android:layout_gravity="center_horizontal"
+	    android:inAnimation="@android:anim/fade_in"
+	    android:outAnimation="@android:anim/fade_out"
+	    android:id="@+id/image_switcher"
+	    ></ImageSwitcher>
+	<Button 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/btn_image_switcher"
+	    android:text="切换图片>>"
+	    />
+	
+	<!-- TextSwitcer:  -->
+	<TextSwitcher 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:inAnimation="@android:anim/fade_in"
+	    android:outAnimation="@android:anim/fade_out"
+	    android:id="@+id/text_switcher"
+	    
+	    ></TextSwitcher>
+	<Button 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/btn_text_switcher"
+	    android:text="切换文本>>"
+	    />
+	
+</LinearLayout>

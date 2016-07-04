@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bitland-demo-views</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_d__bitmap">D_Bitmap</string>
+    <string name="title_activity_d__layer_drawable">D_LayerDrawable</string>
+    <string name="title_activity_d__state_list_drawable_ctivity">D_StateListDrawable_ctivity</string>
+    <string name="title_activity_d__level_drawable">D_LevelDrawable</string>
+    <string name="title_activity_d__transition_drawable">D_TransitionDrawable</string>
+    <string name="title_activity_d__inset_drawable">D_InsetDrawable</string>
+    <string name="title_activity_d__clip_drawable">D_ClipDrawable</string>
+    <string name="title_activity_d__scale_drawable">D_ScaleDrawable</string>
+    <string name="title_activity_d__rotate_drawable">D_RotateDrawable</string>
+    <string name="title_activity_d__gradient_drawable">D_GradientDrawable</string>
+    <string name="title_activity_d__custom_drawable">D_CustomDrawable</string>
+    <string name="title_activity_v__image_view__scale_type">V_ImageView_ScaleType</string>
+    <string name="title_activity_layout__dp__calculator">Layout_Dp_Calculator</string>
+    <string name="title_activity_mesure_test">MesureTestActivity</string>
+    <string name="title_activity_events">EventsActivity</string>
+    <string name="title_activity_test_custom_view_group">TestCustomViewGroupActivity</string>
+    <string name="title_activity_draw2_d">Draw2DActivity</string>
+
+</resources>

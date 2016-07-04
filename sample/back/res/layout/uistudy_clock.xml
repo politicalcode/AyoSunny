@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   	android:orientation="vertical" >
+
+    <!-- 模拟时钟：
+    	——dial: 模拟时钟表盘，@drawable/watch
+    	——hand_hour：时针图片
+    	——hand_minute：分针图片
+     -->
+    <AnalogClock 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    
+    <!-- 数字时钟
+    	——drawableRight：在数字时钟文本后面显示小图片，drawableLeft, top, bottom
+    	——继承自TextView
+     -->
+    <DigitalClock 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f0f"
+        
+        />
+   
+    <!-- 计时器
+    	——继承自TextView
+    	——显示从某个起始时间开始，一共过去了多长时间
+    	andriod:format：指定计时器的计时格式
+    	setBase(long base)：设置计时器的开始时间
+    	setFormat(String format)：设置时间的显示格式
+    	start(), stop()
+    	setOnChronometerTickLisener(ChronometerTick.onChronometerTickListener listener)
+     -->
+     <LinearLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         >
+		<Chronometer
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/tick_didadida"
+		    />
+		<Button 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/btn_tick"
+		    android:text="开始计时"
+		    />
+	</LinearLayout>
+
+</LinearLayout>

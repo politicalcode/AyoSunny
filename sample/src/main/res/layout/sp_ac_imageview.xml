@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+	android:background="#ffffff"
+     >
+
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_alpha_more"
+        android:text="增加透明度"
+        />
+     <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_alpha_less"
+        android:text="减少透明度"
+        />
+     <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_next"
+        android:text="下一张"
+        />
+    <!-- ImageView：
+    	——图像显示
+    	——其实能显示任何drawable资源
+    	
+    	能显示什么：
+    	setImageBitmap(Bitmap bm)
+    	setImageDrawable(Drawable drawable)
+    	setImageResource(int resId)
+    	setImageURI(URI uri)
+    	
+    	ImageView有个尺寸，要显示的图像有个尺寸，二者怎么适应：
+    	setMaxHeight(int), setMaxWidth(int)：最大高度和宽度
+    	ImageView为图片而调整：setAdjustViewBounds(boolean)：ImageView是否调整自己的边界来保持图片的长宽比
+    	setCropToPadding(boolean)：true则组件被裁剪到保留ImageView的padding
+    	图片为ImageView而缩放：setScaleType(ImageView.ScaleType)：设置所显示的图片如何缩放或移动来适应Imageview的大小
+    		ImageView.ScaleType.MATRIX：图片按matrix方式缩放
+    		ImageView.ScaleType.FIT_XY: 图片的横向纵向独立缩放以适应ImageView，长宽比会变
+    		ImageView.ScaleType.FIT_START:保持纵横比，图片从ImageView左上角开始显示，图片较长的边和ImageView的对应边相等
+    		ImageView.ScaleType.FIT_CENTER:保持纵横比，图片完全显示在中央
+    		ImageView.ScaleType.FIT_END:保持纵横比，图片显示在右下角
+    		ImageView.ScaleType.CENTER:不进行任何缩放，图片位于ImageView中央
+    		ImageView.ScaleType.CENTER_CROP:保持纵横比，使得图片能完全覆盖ImageView，只要图片的最短边能显示出来即可
+    		ImageView.ScaleType.CENTER_INSIDE:保持纵横比缩放，使得该图片完全适应ImageView，并全部显示
+    	
+    	获得ImageView中显示的Drawable资源：
+    	——BitmapDrawable bitmapDrawable = (BitmapDrawable)imageView.getDrawable()
+    	——Bitmap bitmap = bitmapDrawable.getBitmap()
+    	
+     -->
+     
+	    <ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="240dp"
+			android:id="@+id/imageWhole"
+			android:scaleType="fitCenter"
+			android:src="@drawable/kaola" />
+	    <ImageView
+	        android:layout_width="120dp"
+	        android:layout_height="120dp"
+	        android:background="#00f"
+	        android:layout_marginTop="10dp"
+			android:id="@+id/imagePart"
+			android:src="@drawable/kaola" />
+</LinearLayout>

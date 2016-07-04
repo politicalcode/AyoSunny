@@ -1,0 +1,116 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <!-- 进度条：
+    	——默认是圆环，圆环可大可小，圆环没法显示进度，只能在那转
+    	
+    	——max：进度条最大值，是个int，对应100%， setProgress对应都不是百分比，而是这个最大值
+    	——progress： progress/max就是显示的百分比
+    	——progressDrawable：通过这个属性指定进度条的外观，配合layer_list资源
+    	——indeterminateDrawable：通过这个属性指定不显示进度的进度条的外观
+    	——indeterminateDuration：不显示进度的进度条的持续时间
+    	——
+    	
+     -->
+     <!-- 大圆环 -->
+     <ProgressBar 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         style="@android:style/Widget.ProgressBar.Large"
+         />
+     
+	<!-- 中等圆环 -->
+     <ProgressBar 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         />
+     
+     <!-- 小圆环 -->
+     <ProgressBar 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         style="@android:style/Widget.ProgressBar.Small"
+         />
+     
+     <!-- 水平进度条 -->
+     <ProgressBar 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         style="@android:style/Widget.ProgressBar.Horizontal"
+         android:id="@+id/progress"
+         />
+     
+     <!-- 改变轨道外观的水平进度条 --> 
+     <ProgressBar 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:progressDrawable="@drawable/uistudy_my_bar"
+         style="@android:style/Widget.ProgressBar.Horizontal"
+         android:id="@+id/layer_list_progress"
+         />
+     
+     <!-- 标题栏的进度条：这里只是控制按钮 -->
+     <Button 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/btn_show_progress_on_titlebar"
+         android:text="显示标题栏进度条"
+         />
+     <Button 
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/btn_hide_progress_on_titlebar"
+         android:text="隐藏标题栏进度条"
+         />
+     
+     <!-- 拖动条 SeekBar，继承自AbsSeekBar
+     	——拖动条让你拖动数值，从而对其他参数进行调节
+     	——thumb可以指定拖动块的图片
+     	——max是拖动条可以选择的数值范围
+     -->
+     
+     <ImageView
+         android:id="@+id/image_alpha_jumper"
+         android:layout_width="fill_parent"
+         android:layout_height="240px"
+         android:src="@drawable/qie"
+         />
+     
+     <SeekBar 
+         android:id="@+id/seekbar"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:max="255"
+         android:progress="255"
+         android:thumb="@drawable/red"
+         />
+     
+     <!-- 星级评分条：RatingBar
+     	——和SeekBar有一样的父类
+     	
+     	isIndacator: 是否允许用户改变，true为不允许
+     	numStarts： 共有几个星级
+     	rating：默认星级，相当于用progress设置当前进度
+     	stepSize：设置每次最少需要改变多少个星级
+     	max：满星级时对应的int的值,就是说可以当个进度条来用
+      -->
+      <RatingBar 
+          android:id="@+id/rating"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:numStars="5"
+          android:max="100"
+          android:rating="2.5"
+          android:stepSize="0.5"
+          />
+      
+</LinearLayout>
+</ScrollView>

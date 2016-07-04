@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll_animate_shower"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_animate_shower"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/animate_shower" />
+
+        <ImageView
+            android:id="@+id/iv_animate_shower2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/animate_shower" />
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/btn_go"
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_animate_shower"
+        android:layout_centerHorizontal="true"
+        android:text="Let&apos;s Go!" />
+    
+    <ListView 
+        android:id="@+id/lv_anims"
+        android:layout_below="@+id/btn_go"
+        android:layout_above="@+id/btn_add_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></ListView>
+
+    <Button
+        android:id="@+id/btn_add_step"
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:text="添加下一步" />
+
+</RelativeLayout>

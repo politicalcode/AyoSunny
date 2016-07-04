@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/iv"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/d_gradient_drawable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/animate_shower" />
+    
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_info"
+        android:background="@drawable/d_gradient_drawable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#b5c4a3"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ImageView宽度(dp，0或空是wrap_content)：" />
+
+        <EditText
+            android:id="@+id/et_w"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ImageView高度(dp，0或空是wrap_content)：" />
+
+        <EditText
+            android:id="@+id/et_h"
+            android:inputType="number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    
+    <Spinner 
+        android:id="@+id/sp_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+<TextView
+    android:id="@+id/tv_explain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+</LinearLayout>
