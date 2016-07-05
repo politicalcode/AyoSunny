@@ -49,7 +49,7 @@ public class WBDemoMainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_weibo_main);
         LogUtil.sIsLogEnable = true;
         
         // 微博授权功能
