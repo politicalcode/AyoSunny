@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="actionbar_bg">#FF0099CC</color>
+    <color name="statusbar_bg">#FF006080</color>
+
     <color name="common_top_bar_blue">#e600b2</color>
 
     <color name="media_indicator_bg_pressed">#969696</color>
