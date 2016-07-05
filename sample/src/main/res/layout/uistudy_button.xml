@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮：" />
+
+    <!-- 文字带阴影的按钮 -->
+
+    <Button
+        android:id="@+id/btn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#aa5"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="1"
+        android:text="文字带阴影的按钮"
+        android:textSize="12pt" />
+
+    <!--
+         普通文字按钮 ：
+    	——默认的样式还有个状态选择器，一点还变样，但是你要是指定
+    	background属性为一个图片，那点了也没反应
+    	——所以要指定background，就得指定个状态选择器（像第三个）
+    	——背景图片还是得用9path图片（特殊的png图片），要不拉伸的难看
+    	——图片什么形状，按钮就显示什么形状，所以说安卓的按钮异常强大
+    -->
+
+    <Button
+        android:id="@+id/btn_ordinary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/red"
+        android:text="普通按钮"
+        android:textSize="10pt" />
+
+    <!-- 带文字的图片按钮 -->
+
+    <Button
+        android:id="@+id/btn_9path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/uistudy_button_selector"
+        android:text="带文字的图片按钮"
+        android:textSize="11pt" />
+
+    <!-- 单选按钮 -->
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_button_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="男" />
+
+        <RadioButton
+            android:id="@+id/radio_button_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="女" />
+    </RadioGroup>
+
+    <!-- 复选按钮 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/checkbox_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红色" />
+
+        <CheckBox
+            android:id="@+id/checkbox_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绿色" />
+
+        <CheckBox
+            android:id="@+id/checkbox_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蓝色" />
+    </LinearLayout>
+
+    <!-- 状态开关 -->
+    <ToggleButton 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggle_button"
+        android:textOn="开"
+        android:textOff="关"
+        android:checked="true"
+        />
+    
+    <!-- 开关 
+    ——switchMinWidth：开关最小宽度
+    ——swtichPadding：开关与文本之间的空白
+    
+    ——swithTextAppearance：开关图标上的文本样式
+    ——textStyle：开关的文本风格
+    ——typeface：设置开关的文本风格
+    
+    ——thumb：使用自定义drawable绘制开关的按钮
+    ——track：使用自定义drawable绘制开关轨道
+    
+    -->
+   <!--  <Switcher
+        android:id="@+id/switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="开"
+        android:textOff="关"
+        android:checked="true"
+        /> -->
+</LinearLayout>

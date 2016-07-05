@@ -44,6 +44,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46c1d774-7b99-4b1d-a038-dcfcebaf5aa4" name="Default" comment="">
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/app/SystemBarTintManager.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_1.xml" />
@@ -54,6 +55,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/rxlifecycle_components_0_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/rxlifecycle_components_0_4_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_1_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/app/base/TmplBaseActivity.java" afterPath="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/app/base/TmplBaseActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ayoimage_sample/ayoimage_sample.iml" afterPath="$PROJECT_DIR$/ayoimage_sample/ayoimage_sample.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rxjavasample/rxjavasample.iml" afterPath="$PROJECT_DIR$/rxjavasample/rxjavasample.iml" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/sina/weibo/sdk/demo/WBDemoMainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/sina/weibo/sdk/demo/WBDemoMainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ayoimageloader/ayoimageloader.iml" afterPath="$PROJECT_DIR$/ayoimageloader/ayoimageloader.iml" />
@@ -165,11 +171,39 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="activity_color.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sample/src/main/res/layout/activity_color.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+=======
+      <file leaf-file-name="StatusPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample/src/main/java_ayoview/com/ayoview/sample/recyclerview/status/StatusPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TmplBaseActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ayoview/src/main/java/org/ayo/app/base/TmplBaseActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.18439716">
+              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
               <folding />
             </state>
           </provider>
@@ -11252,6 +11286,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/sample/src/main/res/layout/indic_flyco_activity_api.xml" />
         <option value="$PROJECT_DIR$/sample/src/main/java_ayoview/com/ayoview/sample/indicator/FlycoPageIndicaorActivity.java" />
         <option value="$PROJECT_DIR$/sample/src/main/java_ayoview/com/ayoview/sample/indicator/RoundCornerIndicaorActivity.java" />
@@ -11303,6 +11338,59 @@
         <option value="$PROJECT_DIR$/ayoview/src/main/res/values-v19/styles.xml" />
         <option value="$PROJECT_DIR$/ayoview/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/sample/src/main/res/layout/ac_button_demos.xml" />
+=======
+        <option value="$PROJECT_DIR$/ayoask/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/ayoask/src/main/java/org/ayo/pop/Pop.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/Initailizer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/MyInitializer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/initialize/StepOfAyoView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/initialize/StepOfAyoSdk.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/initialize/StepOfCrash.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/Initializer.java" />
+        <option value="$PROJECT_DIR$/ayoview/build.gradle" />
+        <option value="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/view/imageview/gif/AnimationListener.java" />
+        <option value="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/view/imageview/gif/GifAnimationMetaData.java" />
+        <option value="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/view/imageview/gif/GifDrawableBuilder.java" />
+        <option value="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/view/imageview/gif/GifViewUtils.java" />
+        <option value="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/view/imageview/gif/GifTextureView.java" />
+        <option value="$PROJECT_DIR$/ayoask/src/main/java/org/ayo/permission/AskActivity.java" />
+        <option value="$PROJECT_DIR$/ayoask/src/main/java/org/ayo/permission/Constants.java" />
+        <option value="$PROJECT_DIR$/ayoask/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/initialize/StepOfSdCard.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/initialize/StepOfHttp.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/initialize/StepOfImageLoader.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/Config.java" />
+        <option value="$PROJECT_DIR$/ayosdk/src/main/java/org/ayo/Ayo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/initialize/StepOfLog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/App.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/ui/activity/SplashActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/wb_ac_splash.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/ui/fragment/top/TopNewsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/wb_frag_viewpager.xml" />
+        <option value="$PROJECT_DIR$/ayoview/src/main/res/layout/ayo_layout_fragment_pager.xml" />
+        <option value="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/app/tmpl/pager/FragmentPager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/ui/fragment/main/TopPagerFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/ui/fragment/top/TopITFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/model/qa/QaSimple.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/bg_common_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/ui/adapter/QaAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/wb_frag_qa.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/ui/fragment/qa/QaListFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/ui/fragment/main/QaFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_qa.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/wb_frag_profile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/frag_tmpl_timeline_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/ui/fragment/main/ConversationListFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/org/ayo/weibo/ui/activity/MainFrameActivity.java" />
+        <option value="$PROJECT_DIR$/ayoview/src/main/res/layout/layout_view_titlebar_right_btn.xml" />
+        <option value="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/view/widget/TitleBar.java" />
+        <option value="$PROJECT_DIR$/sample/src/main/java_ayoview/com/ayoview/sample/recyclerview/info.java" />
+        <option value="$PROJECT_DIR$/sample/src/main/java_ayoview/com/ayoview/sample/recyclerview/status/StatusPage.java" />
+        <option value="$PROJECT_DIR$/ayoview/src/main/java/org/ayo/app/base/TmplBaseActivity.java" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       </list>
     </option>
   </component>
@@ -11524,6 +11612,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="AyoWeibo" />
@@ -11575,6 +11664,13 @@
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
+=======
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -11583,8 +11679,16 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="recentsLimit" value="5" />
+<<<<<<< HEAD
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="04157df46c12d215" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/安卓-sdk/SuperImageSdkDemo" />
+=======
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="6&amp;bbdc8b6&amp;0&amp;0003" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Daogou2016" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
     <property name="SearchEverywhereHistoryKey" value="{&#9;null&#9;null" />
     <property name="device.picker.selection" value="04157df46c12d215" />
   </component>
@@ -11994,6 +12098,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="1592" y="-161" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -12028,6 +12133,38 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32640588" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25301206" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32874355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32733813" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32702237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46127367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32816538" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -12046,6 +12183,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sina/weibo/sdk/demo/WBAuthActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -12066,6 +12204,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/weibosdk/src/main/res/values/dimens.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -12079,11 +12220,18 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/weibosdk/src/main/res/values/styles.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ac_gallerys.xml">
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="12" selection-start-line="20" selection-start-column="4" selection-end-line="63" selection-end-column="12" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/weibosdk/src/main/AndroidManifest.xml">
@@ -12106,6 +12254,16 @@
           <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
         </state>
       </provider>
+<<<<<<< HEAD
+=======
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/ayo_frag_gallery.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.3125">
+          <caret line="59" column="46" selection-start-line="55" selection-start-column="4" selection-end-line="59" selection-end-column="46" />
+        </state>
+      </provider>
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       <provider editor-type-id="android-designer">
         <state />
       </provider>
@@ -12127,19 +12285,37 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/arrays.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/wb_frag_viewpager.xml">
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
         </state>
       </provider>
+<<<<<<< HEAD
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.5">
           <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
           <folding />
+=======
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ayoview/src/main/res/layout/ayo_layout_fragment_pager.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.75">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="39" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sample/src/main/java_ayoview/com/ayoview/anim/AA.java">
@@ -12274,11 +12450,16 @@
           <folding />
         </state>
       </provider>
+<<<<<<< HEAD
       <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sample/src/main/res/layout/activity_match_actionbar.xml">
+=======
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_qa.xml">
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
@@ -12289,11 +12470,18 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/sample/src/main/java_opensource/com/ayo/opensource/zlayout/DemoScrollDownActivity.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/wb_frag_profile.xml">
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3318182">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sample/src/main/java/com/cowthan/sample/menu/Leaf.java">
@@ -12311,11 +12499,18 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/sample/src/main/java_ayoview/com/ayoview/sample/systembar/MatchActionBarActivity.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/wb_frag_qa.xml">
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="58" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="65" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sample/src/main/java_ayoview/com/ayoview/sample/systembar/SamplesListActivity.java">
@@ -12325,11 +12520,18 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ayoview/src/main/java/org/ayo/app/SystemBarTintManager.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/frag_tmpl_timeline_list.xml">
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="96" column="17" selection-start-line="96" selection-start-column="17" selection-end-line="96" selection-end-column="17" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sample/src/main/AndroidManifest.xml">
@@ -12340,6 +12542,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ayoview/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.928571">
@@ -12349,11 +12552,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ayoview/src/main/res/values-v19/styles.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/wb_ac_main_frame.xml">
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.107143">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ayoview/src/main/java/org/ayo/app/base/SwipeBackActivityAttacher.java">
@@ -12363,6 +12572,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/sample/src/main/java/com/cowthan/sample/BaseActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31669536">
@@ -12374,12 +12584,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="112" column="58" selection-start-line="112" selection-start-column="58" selection-end-line="112" selection-end-column="58" />
+=======
+    <entry file="file://$PROJECT_DIR$/ayoview/src/main/res/layout/layout_view_titlebar_right_btn.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sample/src/main/java_opensource/com/ayo/opensource/zlayout/LayoutDemoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -12403,6 +12623,16 @@
         <state vertical-scroll-proportion="0.21142857">
           <caret line="5" column="33" selection-start-line="3" selection-start-column="40" selection-end-line="5" selection-end-column="33" />
           <folding />
+=======
+          <caret line="136" column="22" selection-start-line="136" selection-start-column="22" selection-end-line="136" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ayoview/src/main/res/layout/layout_view_titlebar_right_btn.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30844155">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -12412,8 +12642,12 @@
     <entry file="file://$PROJECT_DIR$/sample/src/main/res/layout/ac_button_demos.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
           <folding />
+=======
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -12422,9 +12656,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sample/src/main/res/layout/activity_color.xml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding />
+=======
+        <state vertical-scroll-proportion="0.029411765">
+          <caret line="145" column="35" selection-start-line="145" selection-start-column="35" selection-end-line="145" selection-end-column="35" />
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -12433,6 +12672,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sample/src/main/java_ayoview/com/ayoview/sample/systembar/ColorActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
@@ -12443,6 +12683,20 @@
         </state>
       </provider>
     </entry>
+=======
+        <state vertical-scroll-proportion="0.25882354">
+          <caret line="100" column="8" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/src/main/java_ayosdk/com/ayo/sample/xml/DemoXmlActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.826303">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
     <entry file="file://$PROJECT_DIR$/sample/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -12459,5 +12713,32 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/sample/src/main/java_ayoview/com/ayoview/sample/recyclerview/status/StatusPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ayoview/src/main/java/org/ayo/app/base/TmplBaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18439716">
+          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> b9c9e0d2f463d75924635b88f1806469056564d3
   </component>
 </project>

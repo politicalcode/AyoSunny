@@ -44,6 +44,7 @@ public class MenuItemFragment extends SBFragment {
 		btn.setTextSize(15);
 		btn.setPadding(20, 0, 20, 0);
 		btn.setTextColor(Color.WHITE);
+		btn.setAllCaps(false);
 
 
 		LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, Utils.dip2px(agent.getActivity(), 40));

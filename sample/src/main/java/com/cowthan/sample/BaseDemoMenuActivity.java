@@ -8,9 +8,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.cowthan.sample.BaseActivity;
-import com.cowthan.sample.R;
-import com.cowthan.sample.Utils;
 import com.cowthan.sample.menu.Leaf;
 
 import org.ayo.app.base.ActivityAttacher;
@@ -48,6 +45,7 @@ public abstract class BaseDemoMenuActivity extends BaseActivity {
         btn.setTextSize(15);
         btn.setPadding(20, 0, 20, 0);
         btn.setTextColor(Color.WHITE);
+        btn.setAllCaps(false);
 
 
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, Utils.dip2px(getActivity(), 40));

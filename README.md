@@ -216,7 +216,7 @@ sourceSets {
 		
 			
 ####
-* UIFramework：用户提示
+* UIFramework：弹框
     * [原生Dialog](./doc/n_dialog_origin.md)
     * [Dialog：Alert系列](./doc/README-ayo.md)
     * [WheelPicker：列表选择](./doc/README-ayo.md)
@@ -232,13 +232,23 @@ sourceSets {
 
 ####
 * UIFramework：动画
-    * [Activity切换动画](./doc/README-ayo.md)
+	* Tween动画
+		* Activity切换动画
+		* Fragment切换动画
+		* Dialog出入动画
+		* Popup出入动画
+		* Rotate3D
+		* 动画库，工具类
     * [属性动画](./doc/README-ayo.md)
+		* 用法
+		* 封装：daimajia
+		* nineold的兼容，改进，怎么去掉对nineold的依赖
     * [缓动函数--daimajia ease](./doc/README-ayo.md)
     * [spring rebound](./doc/README-ayo.md)
     * [Transition](./doc/README-ayo.md)
     * [布局](./doc/README-ayo.md)
     * [path动画]
+	* Scroll，滑动，手势
 
 ####
 * UIFramework：绘图
@@ -295,13 +305,6 @@ sourceSets {
     * [热补丁]
 
 ####
-* 杂七杂八
-    * [MVP模式](./doc/README-2016.md)
-    * [基于状态管理的复杂业务逻辑如何实现？](./doc/README-2016.md)
-    * [基于状态管理的复杂业务逻辑如何实现？](./doc/README-realthing.md)
-
-
-####
 * 其他第三方常用库介绍
     * 统计：友盟统计
     * 更新：友盟自动更新
@@ -318,13 +321,3 @@ sourceSets {
     * 音频播放器
     * 自定义app内置浏览器
     * 支付宝
-
-
-####
-* 项目管理
-    * 项目的任务分级：
-        * 简单型：如画个ListView，画个Item，改改界面布局等
-        * 长期型：一般由主导人员完成，如优化底层http，抢单实现，订单管理实现
-        * 讨论型：未定的东西，一般会转化为长期型
-        * 缺陷型：大多数是简单型，下个版本就必须随着上线的东西
-        * 技术难点型：需要先调研，再讨论，再分解为简单和长期

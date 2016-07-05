@@ -7,6 +7,7 @@ import com.ayo.opensource.zlikeview.LikeViewMainActivity;
 import com.ayo.opensource.zlikeview2.LikeView2MainActivity;
 import com.ayo.opensource.zmathview.MathViewMainActivity;
 import com.ayo.opensource.zpartial_explode.PartialExplodeMainActivity;
+import com.ayo.sample.sdk.DemoContactActivity;
 import com.ayo.sample.xml.DemoXmlActivity;
 import com.ayo.sample.zasync.AsyncDemoActivity;
 import com.ayo.sample.zdatabase.XUtilsDBDemoActivity;
@@ -18,7 +19,11 @@ import com.ayoview.anim.DemoAnimMenu;
 import com.ayoview.notifysample.DialogDemoActivity;
 import com.ayoview.sample.deepmind.DemoCustomMenuActivity;
 import com.ayoview.sample.drawable.DemoDrawableActivity;
+import com.ayoview.sample.imageview.ImageMenuActivity;
 import com.ayoview.sample.indicator.SimpleHomeActivity;
+import com.ayoview.sample.progress.ProgressBarDemoActivity;
+import com.ayoview.sample.resource.Layout_Dp_Calculator;
+import com.ayoview.sample.textview.TextViewDemoActivity;
 import com.ayoview.sample.tmpl_listview.TmplListActivity;
 import com.ayoview.sample.tmpl_pagegroup.DemoMainActivity;
 import com.ayoview.sample.tmpl_recycler_adapter.AdapterDelegateDemo;
@@ -26,7 +31,6 @@ import com.ayoview.sample.tmpl_recyclerview.DemoRecyclerActivity;
 import com.ayoview.sample.ultra.pulltorefresh.UltraDemoActivityAttacher;
 import com.ayoview.sample.zbutton.ButtonDemoActivity;
 import com.ayoview.sample.zsimplepromt.SvProgressHudDemoActivity;
-import com.ayoview.sample.ztextview.TextViewDemoActivity;
 import com.cowthan.sample.menu.Leaf;
 import com.cowthan.sample.menu.Menu;
 import com.cowthan.sample.menu.MenuItem;
@@ -80,6 +84,7 @@ public class Config{
                 menuItem1.addLeaf(new Leaf("多进程", "", AsyncDemoActivity.class));
                 menuItem1.addLeaf(new Leaf("缓存", "", null));
                 menuItem1.addLeaf(new Leaf("事件总线", "", EventBusDemoActivity.class));
+                menuItem1.addLeaf(new Leaf("安卓：联系人", "", DemoContactActivity.class));
 
             }
 
@@ -101,18 +106,28 @@ public class Config{
             {
                 menuItem3.addLeaf(new Leaf("Activity全解析", "", null));
                 menuItem3.addLeaf(new Leaf("Fragment全解析", "", null));
-                menuItem3.addLeaf(new Leaf("Drawable系列", "", DemoDrawableActivity.class));
+                menuItem3.addLeaf(new Leaf("Drawable：内置", "", DemoDrawableActivity.class));
+                menuItem3.addLeaf(new Leaf("Drawable：自定义", "", DemoCustomMenuActivity.class));
                 menuItem3.addLeaf(new Leaf("TextView：显示系列", "", TextViewDemoActivity.class));
                 menuItem3.addLeaf(new Leaf("EditText：输入系列", "", TextViewDemoActivity.class));
                 menuItem3.addLeaf(new Leaf("Button：点击系列", "", ButtonDemoActivity.class));
-                menuItem3.addLeaf(new Leaf("ImageView系列", "", null));
-                menuItem3.addLeaf(new Leaf("ProgressView系列", "", null));
+                menuItem3.addLeaf(new Leaf("ImageView系列", "", ImageMenuActivity.class));
+                menuItem3.addLeaf(new Leaf("ProgressView系列", "", ProgressBarDemoActivity.class));
                 menuItem3.addLeaf(new Leaf("Indicator", "", SimpleHomeActivity.class));
-                menuItem3.addLeaf(new Leaf("View Flipper系列", "", null));
-                menuItem3.addLeaf(new Leaf("表单系列", "", null));
+                menuItem3.addLeaf(new Leaf("View Flipper和Pager系列", "", null));
+                menuItem3.addLeaf(new Leaf("DrawerLayout：侧滑系列-1", "", null));
+                menuItem3.addLeaf(new Leaf("SwipeBackLayout：侧滑系列-2", "", null));
+                menuItem3.addLeaf(new Leaf("SwipeLayout：侧滑系列-3", "", null));
+                menuItem3.addLeaf(new Leaf("RecyclerView：列表系列", "", UltraDemoActivityAttacher.class));
+                menuItem3.addLeaf(new Leaf("自定义控件的套路", "", null));
+
                 menuItem3.addLeaf(new Leaf("布局", "", LayoutDemoActivity.class));
-                menuItem3.addLeaf(new Leaf("列表", "", UltraDemoActivityAttacher.class));
-                menuItem3.addLeaf(new Leaf("自定义Drawable和View", "", DemoCustomMenuActivity.class));
+                menuItem3.addLeaf(new Leaf("资源扫描器和适配", "", Layout_Dp_Calculator.class));
+                menuItem3.addLeaf(new Leaf("measure研究", "", Layout_Dp_Calculator.class));
+                menuItem3.addLeaf(new Leaf("layout研究", "", Layout_Dp_Calculator.class));
+                menuItem3.addLeaf(new Leaf("draw研究", "", Layout_Dp_Calculator.class));
+                menuItem3.addLeaf(new Leaf("touch研究", "", Layout_Dp_Calculator.class));
+                menuItem3.addLeaf(new Leaf("主题研究", "", Layout_Dp_Calculator.class));
             }
 
             MenuItem menuItem4 = new MenuItem("提示", R.drawable.weixin_normal, R.drawable.weixin_pressed);

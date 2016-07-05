@@ -1,0 +1,270 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_1" >
+
+    <!-- ===================================== -->
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView及其子控件："
+        android:textSize="22sp"
+        android:textColor="#ffff0000"
+        />
+    
+    <Button
+        android:onClick="click"     
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:id="@+id/btn_button"
+        android:text="按钮一家亲" />
+    
+     <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_clock"
+        android:text="模拟时钟和数字时钟" />
+
+     <!-- ===================================== -->
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ImageView及其子控件："
+        android:textSize="22sp"
+        android:textColor="#ffff0000"
+        />
+     <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_imageview"
+        android:text="图片浏览器" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_advancebutton"
+        android:text="ImageButton和ZoomButton" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_imageview_scale"
+        android:text="ImageView缩放方式" />
+      
+      <!-- ===================================== -->
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ProgressBar及其子控件："
+        android:textSize="22sp"
+        android:textColor="#ffff0000"
+        />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_progressbar"
+        android:text="进度条" />
+      
+       <!-- ===================================== -->
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ViewAnimation及其子控件："
+        android:textSize="22sp"
+        android:textColor="#ffff0000"
+        />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_viewswitcher"
+        android:text="ViewSwitcher" />
+       <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_image_switcher"
+        android:text="ImageSwitcher" />
+       <!-- ===================================== -->
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="菜单：OptionMenu和ContextMenu"
+        android:textSize="20sp"
+        android:textColor="#ffff0000"
+        />
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1、OptionMenu：就是Menu，SubMenu，MenuItem，请按菜单键"
+        android:textSize="18sp"
+        />
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2、ContextMenu：上下文菜单：长按此控件"
+        android:textSize="18sp"
+        android:id="@+id/context_menu"
+        />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_webview"
+        android:text="WebView" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_tween"
+        android:text="tween动画" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_tween2"
+        android:text="tween动画2" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_property"
+        android:text="属性动画" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_animation_drawable"
+        android:text="Drawable-1: AnimationDrawable(帧动画)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_bitmap_drawable"
+        android:text="Drawable-2: BitmapDrawable(位图)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_ninepatch_drawable"
+        android:text="Drawable-3: NinePatchDrawable(9patch)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_layer_drawable"
+        android:text="Drawable-4: LayerDrawable(图层)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_statelist_drawable"
+        android:text="Drawable-5: StateListDrawable(状态选择器)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_level_drawable"
+        android:text="Drawable-6: LevelDrawable(数值范围选择器)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_transition_drawable"
+        android:text="Drawable-7: TransitionDrawable(切换)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_inset_drawable"
+        android:text="Drawable-8: InsetDrawable(嵌入)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_clip_drawable"
+        android:text="Drawable-9: ClipDrawable(裁剪)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_scale_drawable"
+        android:text="Drawable-10: ScaleDrawable(缩放)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_rotate_drawable"
+        android:text="Drawable-11: RotateDrawable(旋转)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_gradient_drawable"
+        android:text="Drawable-12: GradientDrawable(图形和渐变，对应shape标签)" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_color_drawable"
+        android:text="Drawable-13: ColorDrawable(颜色)" />
+      <!-- ============== -->
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_screen_adapte1"
+        android:text="屏幕适配研究1" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_screen_adapte2"
+        android:text="屏幕适配研究2" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_screen_calculator"
+        android:text="屏幕适配计算器" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_measure"
+        android:text="测量过程分析" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_listeners"
+        android:text="View事件研究" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_diy_viewgroup_1"
+        android:text="自定义垂直布局1" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_draw_2d"
+        android:text="2D绘图" />
+      <Button
+        android:onClick="click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_touch"
+        android:text="Touch事件研究" />
+</LinearLayout>
+</ScrollView>
