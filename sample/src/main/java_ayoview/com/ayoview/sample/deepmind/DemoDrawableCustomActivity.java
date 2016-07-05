@@ -1,7 +1,9 @@
 package com.ayoview.sample.deepmind;
 
+import android.annotation.TargetApi;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -16,6 +18,7 @@ import com.cowthan.sample.R;
  */
 public class DemoDrawableCustomActivity extends BaseActivity {
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -91,11 +91,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-    <com.ayoview.sample.progress.AyoProgressBar
+    <!--<com.ayoview.sample.progress.AyoProgressBar
         android:id="@+id/progress_custom2"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        />
+        />-->
 
      <!-- 水平进度条1 -->
      <ProgressBar 
