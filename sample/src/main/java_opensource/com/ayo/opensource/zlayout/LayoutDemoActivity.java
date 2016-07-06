@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.ayoview.sample.systembar.SamplesListActivity;
 import com.cowthan.sample.BaseActivity;
 import com.cowthan.sample.R;
 import com.cowthan.sample.Utils;
@@ -25,6 +26,7 @@ public class LayoutDemoActivity extends BaseActivity{
 
     private Leaf[] leaves = {
             new Leaf("ScrollView和ViewPager冲突问题", "", DemoScrollDownActivity.class, 0),
+            new Leaf("SystemBarTint：状态栏一体化", "", SamplesListActivity.class, 0),
     };
 
     @Override

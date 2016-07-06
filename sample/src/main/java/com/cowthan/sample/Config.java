@@ -15,6 +15,7 @@ import com.ayo.sample.zeventbus.EventBusDemoActivity;
 import com.ayo.sample.zhttp.HttpDemoActivity;
 import com.ayo.sample.zlog.JLogDemoActivity;
 import com.ayo.sample.zsdk.ToolkitSampleActivity;
+import com.ayoview.anim.DemoAnimMenu;
 import com.ayoview.notifysample.DialogDemoActivity;
 import com.ayoview.sample.deepmind.DemoCustomMenuActivity;
 import com.ayoview.sample.drawable.DemoDrawableActivity;
@@ -91,7 +92,7 @@ public class Config{
             MenuItem menuItem2 = new MenuItem("动画", R.drawable.weixin_normal, R.drawable.weixin_pressed);
             m1.addMenuItem(menuItem2);
             {
-                menuItem2.addLeaf(new Leaf("Tween动画", "", null));
+                menuItem2.addLeaf(new Leaf("Tween动画", "", DemoAnimMenu.class));
                 menuItem2.addLeaf(new Leaf("属性动画", "", null));
                 menuItem2.addLeaf(new Leaf("Daimajia-YoYo", "", null));
                 menuItem2.addLeaf(new Leaf("Activity切换", "", null));

@@ -1,0 +1,386 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_animate_shower"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_animate_shower"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/animate_shower" />
+
+        <ImageView
+            android:id="@+id/iv_animate_shower2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/animate_shower"
+            android:visibility="gone"
+             />
+        
+        <ImageView
+            android:id="@+id/iv_animate_showe3r"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/animate_shower" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_finish"
+        android:layout_below="@id/ll_animate_shower" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+             >
+
+            <LinearLayout
+                android:id="@+id/ll_types"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="动画类型：" />
+
+                <Spinner
+			        android:id="@+id/sp_types"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			      />
+                	
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_params"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="基本参数：" />
+
+                <EditText
+			        android:id="@+id/et_duration"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="3000"
+			        android:hint="持续毫秒"
+			      />
+                <EditText
+			        android:id="@+id/et_delay"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:hint="延时毫秒"
+			      />
+               
+                	
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重复模式：" />
+
+                 <CheckBox 
+                    android:id="@+id/cb_infinite"
+                    android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="无限重复"
+                    />
+                	
+            </LinearLayout>
+             <LinearLayout
+                android:id="@+id/ll_range"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="始于："
+                     />
+
+                <EditText
+			        android:id="@+id/et_start"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:hint="0-1"
+			      />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="止于："
+                     />
+
+                <EditText
+			        android:id="@+id/et_end"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:hint="0-1"
+			      />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/ll_center_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中心点X："
+                     />
+
+                <Spinner
+			        android:id="@+id/sp_relatives_x"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			      />
+                
+                <EditText
+			        android:id="@+id/et_center_x"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:hint="0-1"
+			      />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/ll_center_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中心点Y："
+                     />
+
+                <Spinner
+			        android:id="@+id/sp_relatives_y"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			      />
+                
+                <EditText
+			        android:id="@+id/et_center_y"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:hint="0-1"
+			      />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/ll_start_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="起点X："
+                     />
+
+                <Spinner
+			        android:id="@+id/sp_relatives_start_x"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			      />
+                
+                <EditText
+			        android:id="@+id/et_start_x"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:hint="0-1"
+			        android:text="0"
+			      />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/ll_start_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="起点Y："
+                    
+                     />
+
+                <Spinner
+			        android:id="@+id/sp_relatives_start_y"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			      />
+                
+                <EditText
+			        android:id="@+id/et_start_y"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:hint="0-1"
+			        android:text="-1"
+			      />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/ll_end_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="终点X："
+                     />
+
+                <Spinner
+			        android:id="@+id/sp_relatives_end_x"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			      />
+                
+                <EditText
+			        android:id="@+id/et_end_x"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:hint="0-1"
+			        android:text="0"
+			      />
+                
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_end_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="终点Y："
+                     />
+
+                <Spinner
+			        android:id="@+id/sp_relatives_end_y"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			      />
+                
+                <EditText
+			        android:id="@+id/et_end_y"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:hint="0-1"
+			        android:text="0"
+			      />
+                
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_inspects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="horizontal"
+                tools:ignore="NewApi" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="插入器：" />
+
+                <Spinner
+			        android:id="@+id/sp_inspects"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			      />
+                	
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    
+    
+    
+    <Button
+        android:text="完成"
+        android:id="@+id/iv_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onFinish"
+        />
+    <Button
+        android:text="预览"
+        android:id="@+id/iv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onShow"
+        />
+
+</RelativeLayout>

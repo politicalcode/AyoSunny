@@ -67,6 +67,16 @@
             android:theme="@style/AyoAppTheme"
             />
 
+        <activity
+            android:name="com.ayoview.anim.tween.TweenMaker"
+            android:theme="@style/AyoAppTheme"
+            />
+
+
+        <activity
+            android:name="com.ayoview.sample.systembar.SamplesListActivity"
+            >
+        </activity>
     </application>
 
 </manifest>

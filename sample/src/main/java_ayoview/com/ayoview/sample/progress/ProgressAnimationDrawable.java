@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PixelFormat;
 import android.graphics.RectF;
@@ -24,15 +25,14 @@ public class ProgressAnimationDrawable extends Drawable {
     private Paint mPaint;
     private Bitmap mBitmap;
     private RectF rectF;
+    BitmapShader shader;
 
     public ProgressAnimationDrawable(){
-        this.mBitmap = BitmapFactory.decodeResource(App.app.getResources(), R.raw.qq);
-
+        this.mBitmap = BitmapFactory.decodeResource(App.app.getResources(), R.drawable.qq);
         //初始化paint
-        BitmapShader shader = new BitmapShader(mBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
-        mPaint.setShader(shader);
+
     }
 
     /**
@@ -81,6 +81,43 @@ public class ProgressAnimationDrawable extends Drawable {
         super.setBounds(left, top, right, bottom);
         JLog.i("RoundImageDrawable", "setBounds--" + left + ", " + top + ", " + right + ", " + bottom);
         rectF = new RectF(left, top, right, bottom);
+
+        float rw = mBitmap.getWidth();
+        float rh = mBitmap.getHeight();
+        float w = rectF.width();
+        float h =  rectF.height();
+
+        float scaleX = 1f;
+        float scaleY = 1f;
+        if(rw > w){
+            scaleX = rw / w;
+        }
+        if(rh > h){
+            scaleY = rh / h;
+        }
+
+        if(scaleX > scaleY) scaleY = scaleX;
+        else scaleX = scaleY;
+
+        rw = rw / scaleX;
+        rh = rh / scaleY;
+
+
+        RectF newRectF = new RectF();
+        newRectF.left = w/2 - rw/2;
+        newRectF.top = h/2 - rh/2;
+        newRectF.right = newRectF.left + rw;
+        newRectF.bottom = newRectF.top + rh;
+        rectF = newRectF;
+        JLog.i("RoundImageDrawable", "rectF--" + newRectF.left + ", " + newRectF.top + ", " + newRectF.right + ", " + newRectF.bottom);
+        shader = new BitmapShader(mBitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
+        Matrix matrix = new Matrix();
+        matrix.setScale(scaleX, scaleY);
+        shader.setLocalMatrix(matrix);
+
+        //Bitmap refBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+
+        mPaint.setShader(shader);
     }
 
     @Override

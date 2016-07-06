@@ -1,5 +1,6 @@
 package com.ayoview.sample.progress;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -79,6 +80,7 @@ public class V_ProgressBar extends BaseActivity {
 
 		final ProgressBar progress_custom = findViewById(R.id.progress_custom);
 		progress_custom.setIndeterminateDrawable(new ProgressAnimationDrawable());
+		progress_custom.setBackgroundColor(Color.BLUE);
 
 		final ProgressBar layer_list_progress = this.findViewById(R.id.layer_list_progress);
 		layer_list_progress.setMax(120);
