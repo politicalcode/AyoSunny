@@ -61,6 +61,14 @@ public abstract class ActivityAttacher implements Serializable{
                                      Class<? extends ActivityAttacher> attacherClazz,
                                      SimpleBundle bundle,
                                      boolean needNewStack,
+                                     int launchMod){
+        startActivity(context, attacherClazz, bundle, needNewStack, launchMod, null);
+    }
+
+    public static void startActivity(Context context,
+                                     Class<? extends ActivityAttacher> attacherClazz,
+                                     SimpleBundle bundle,
+                                     boolean needNewStack,
                                      int launchMode,
                                      OnResultCallBack onResultCallBack)
     {
@@ -98,13 +106,6 @@ public abstract class ActivityAttacher implements Serializable{
 
     }
 
-    public static void startActivityForResult(Context context,
-                                     Class<? extends ActivityAttacher> attacherClazz,
-                                     SimpleBundle bundle,
-                                     boolean needNewStack,
-                                     int launchMode){
-
-    }
 
 
     private TmplBaseActivity activity;

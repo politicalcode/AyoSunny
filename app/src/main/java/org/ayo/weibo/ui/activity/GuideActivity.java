@@ -23,7 +23,7 @@ import java.util.List;
 public class GuideActivity extends AyoActivityAttacher{
 
     public static void start(Context c){
-        ActivityAttacher.startActivity(c, GuideActivity.class, null, false, ActivityAttacher.LAUNCH_MODE_STANDARD);
+        ActivityAttacher.startActivity(c, GuideActivity.class, null, false, ActivityAttacher.LAUNCH_MODE_STANDARD, null);
     }
 
     @Override

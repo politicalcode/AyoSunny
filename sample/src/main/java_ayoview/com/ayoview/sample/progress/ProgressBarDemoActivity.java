@@ -1,5 +1,6 @@
 package com.ayoview.sample.progress;
 
+import com.ayoview.sample.progress.av.AVMainActivity;
 import com.cowthan.sample.BaseDemoMenuActivity;
 import com.cowthan.sample.menu.Leaf;
 
@@ -11,6 +12,7 @@ public class ProgressBarDemoActivity extends BaseDemoMenuActivity {
     protected Leaf[] getMenus() {
         Leaf[] leaves = {
                 new Leaf("Progress原生", "", V_ProgressBar.class),
+                new Leaf("AVLoadingIndicatorView", "", AVMainActivity.class),
         };
         return leaves;
     }
