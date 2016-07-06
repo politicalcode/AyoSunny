@@ -17,6 +17,7 @@ import com.ayo.sample.zlog.JLogDemoActivity;
 import com.ayo.sample.zsdk.ToolkitSampleActivity;
 import com.ayoview.anim.DemoAnimMenu;
 import com.ayoview.notifysample.DialogDemoActivity;
+import com.ayoview.notifysample.DemoSweetAlert;
 import com.ayoview.sample.deepmind.DemoCustomMenuActivity;
 import com.ayoview.sample.drawable.DemoDrawableActivity;
 import com.ayoview.sample.imageview.ImageMenuActivity;
@@ -135,7 +136,7 @@ public class Config{
             {
                 menuItem4.addLeaf(new Leaf("原生对话框", "", DialogDemoActivity.class));
                 menuItem4.addLeaf(new Leaf("简单提示框: SV系列", "", SvProgressHudDemoActivity.class));
-                menuItem4.addLeaf(new Leaf("简单提示框: Sweet系列", "", null));
+                menuItem4.addLeaf(new Leaf("简单提示框: Sweet系列", "", DemoSweetAlert.class));
                 menuItem4.addLeaf(new Leaf("提示条: Snack系列", "", null));
                 menuItem4.addLeaf(new Leaf("提示条: Toast系列", "", null));
                 menuItem4.addLeaf(new Leaf("提示条: 小黄条", "", null));

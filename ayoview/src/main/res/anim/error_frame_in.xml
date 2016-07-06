@@ -10,7 +10,7 @@
         android:toAlpha="1"
         android:duration="400"/>
 
-    <sweet:org.ayo.view.dialog.sweet.Rotate3dAnimation
+    <sweet:org.ayo.notify.sweet.Rotate3dAnimation
         sweet:rollType="x"
         sweet:fromDeg="100"
         sweet:toDeg="0"
