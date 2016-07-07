@@ -3,14 +3,13 @@ package com.ayoview.sample.imageview;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
-import android.view.View.OnFocusChangeListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -56,11 +55,11 @@ public class V_ImageView_ScaleType extends BaseActivity {
 //			ScaleType.MATRIX
 	};
 
-	private EditText et_w;
-
-	private EditText et_h;
+	private TextView et_w;
 
 	private TextView tv_info;
+	SeekBar seekBarW;
+	SeekBar seekBarH;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -86,35 +85,50 @@ public class V_ImageView_ScaleType extends BaseActivity {
 		lp.topMargin = SBViewUtils.getPixel(getActivity(), 10);
 		iv.setLayoutParams(lp);
 		
-		et_w = (EditText) findViewById(R.id.et_w);
-		et_h = (EditText) findViewById(R.id.et_h);
-		
-		et_w.setText(SBViewUtils.getDp(getActivity(), w) + "");
-		et_h.setText(SBViewUtils.getDp(getActivity(), h) + "");
-		
-		et_w.setOnFocusChangeListener(new OnFocusChangeListener() {
-			
+		et_w = findViewById(R.id.et_w);
+
+
+		et_w.setText("(" + w + ", " + h + ")");
+
+		seekBarW = findViewById(R.id.seekBarW);
+		seekBarH = findViewById(R.id.seekBarH);
+
+		seekBarW.setMax(w*2);
+		seekBarH.setMax(h*2);
+
+		seekBarW.setProgress(w);
+		seekBarH.setProgress(h);
+
+		seekBarW.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 			@Override
-			public void onFocusChange(View v, boolean hasFocus) {
-				// TODO Auto-generated method stub
-				if(!hasFocus){
-					//失去焦点了，更改尺寸吧
-					changeSize();
-				}
+			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+				changeSize();
+			}
+
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+			}
+
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
 			}
 		});
-		et_h.setOnFocusChangeListener(new OnFocusChangeListener() {
-			
+		seekBarH.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 			@Override
-			public void onFocusChange(View v, boolean hasFocus) {
-				// TODO Auto-generated method stub
-				if(!hasFocus){
-					//失去焦点了，更改尺寸吧
-					changeSize();
-				}
+			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+				changeSize();
+			}
+
+			@Override
+			public void onStartTrackingTouch(SeekBar seekBar) {
+			}
+
+			@Override
+			public void onStopTrackingTouch(SeekBar seekBar) {
 			}
 		});
-		
+
+
 		//---scaleType
 		
 		final Spinner sp_type = (Spinner) findViewById(R.id.sp_type);
@@ -137,18 +151,14 @@ public class V_ImageView_ScaleType extends BaseActivity {
 	}
 
 	protected void changeSize() {
-		if(et_w.getText().toString().equals("")) et_w.setText("0");
-		if(et_h.getText().toString().equals("")) et_h.setText("0");
-		int w = Integer.parseInt(et_w.getText().toString());
-		int h = Integer.parseInt(et_h.getText().toString());
-		if(w == 0) w = LayoutParams.WRAP_CONTENT;
-		else w = SBViewUtils.getPixel(getActivity(), w);
-		if(h == 0) h = LayoutParams.WRAP_CONTENT;
-		else h = SBViewUtils.getPixel(getActivity(), h);
+		int w = seekBarW.getProgress();
+		int h = seekBarH.getProgress();
+		et_w.setText("(" + w + ", " + h + ")");
 		LayoutParams lp = new LayoutParams(w, h);
 		lp.gravity = Gravity.CENTER_HORIZONTAL;
 		lp.topMargin = SBViewUtils.getPixel(getActivity(), 10);
 		iv.setLayoutParams(lp);
+		iv.invalidate();
 	}
 
 

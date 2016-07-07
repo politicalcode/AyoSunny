@@ -16,8 +16,9 @@ public class ProgressBarDemoActivity extends BaseDemoMenuActivity {
                 new Leaf("AVLoadingIndicatorView", "", AVMainActivity.class),
                 new Leaf("Progressable--ProgressWheel2", "", DemoProgressWheel2.class),
                 new Leaf("Progressable--CircleProgressBar", "", DemoCircularProgressBar.class),
-                new Leaf("Progressable--ProgressWheel，改SweetAlert留的", "", null),
+                new Leaf("Progressable--ProgressWheel，给SweetAlert留的", "", null),
                 new Leaf("Progressable--WhorlView", "", null),
+                new Leaf("Progressable--ProgressBarView", "", DemoProgressBarView.class),
 
         };
         return leaves;

@@ -1,9 +1,15 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#ffffff"
+    android:layout_marginTop="20dp"
     >
 
     <ImageView
@@ -24,40 +30,32 @@
         android:textColor="#b5c4a3"
         android:text="" />
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/et_w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="()" />
+
+    <SeekBar
+        android:id="@+id/seekBarW"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_marginTop="10dp"
+        android:max="70"
+        android:progress="20"
+        android:progressDrawable="@drawable/scrubber_progress" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ImageView宽度(dp，0或空是wrap_content)：" />
-
-        <EditText
-            android:id="@+id/et_w"
-            android:inputType="number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout
+    <SeekBar
+        android:id="@+id/seekBarH"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_marginTop="10dp"
+        android:max="70"
+        android:progress="10"
+        android:progressDrawable="@drawable/scrubber_progress" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ImageView高度(dp，0或空是wrap_content)：" />
 
-        <EditText
-            android:id="@+id/et_h"
-            android:inputType="number"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    
     <Spinner 
         android:id="@+id/sp_type"
         android:layout_width="wrap_content"
@@ -69,3 +67,4 @@
             android:layout_height="wrap_content"
             android:text="" />
 </LinearLayout>
+</ScrollView>

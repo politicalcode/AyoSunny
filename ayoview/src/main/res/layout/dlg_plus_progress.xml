@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/iv"
-        android:background="@anim/progress_animation_list"
+        android:background="@drawable/progress_animation_list"
         />
 
 </LinearLayout>

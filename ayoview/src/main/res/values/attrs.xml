@@ -182,4 +182,18 @@
         <attr name="pwContourColor" format="color"/>
         <attr name="pwContourSize" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="CirclesProgressBar">
+
+        <attr name="cpb2_circlesWidth" format="dimension" />
+        <attr name="cpb2_circlesColor" format="color" />
+        <attr name="cpb2_textCrude" format="dimension" />
+        <attr name="cpb2_textColor" format="color" />
+        <attr name="cpb2_textSize" format="dimension" />
+        <attr name="cpb2_currentProgressColor" format="color" />
+        <attr name="cpb2_currentProgress" format="integer" />
+        <attr name="cpb2_isPercent" format="boolean" />
+        <attr name="cpb2_style" format="integer" />
+        <attr name="cpb2_currentScheduleWidth" format="dimension" />
+    </declare-styleable>
 </resources>
