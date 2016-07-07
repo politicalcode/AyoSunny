@@ -1,10 +1,11 @@
 package org.ayo.view.progress;
 
-import genius.android.view.R;
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
+
+import genius.android.view.R;
 
 
 public class ProgressView extends ImageView{
@@ -23,7 +24,7 @@ public class ProgressView extends ImageView{
 		init();
 	}
 	private void init() {
-		this.setImageResource(R.anim.progress_animation_list);
+		this.setImageResource(R.drawable.progress_animation_list);
 		AnimationDrawable ad = (AnimationDrawable) this.getDrawable();
 		ad.start();
 	}
