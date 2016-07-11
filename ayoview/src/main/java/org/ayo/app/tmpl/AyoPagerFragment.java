@@ -1,7 +1,8 @@
-package org.ayo.app.common;
+package org.ayo.app.tmpl;
 
 import android.view.View;
 
+import org.ayo.app.common.AyoFragment;
 import org.ayo.app.tmpl.pager.FragmentPager;
 
 import genius.android.view.R;

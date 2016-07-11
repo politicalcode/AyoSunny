@@ -21,7 +21,6 @@ import com.cowthan.sample.R;
 
 import org.ayo.app.base.ActivityAttacher;
 import org.ayo.lang.Lists;
-import org.ayo.view.recycler.AyoAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;

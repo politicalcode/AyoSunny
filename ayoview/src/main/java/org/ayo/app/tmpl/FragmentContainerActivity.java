@@ -1,21 +1,21 @@
-package org.ayo.app.common;
+package org.ayo.app.tmpl;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import org.ayo.app.base.SwipeBackActivityAttacher;
+import org.ayo.app.common.AyoSwipeBackActivity;
 
 import genius.android.view.R;
 
 
 /**
- *  一个Activity装载一个Fragment，这个就是模板Activity
+ *  一个Activity装载一个Fragment
  *  Fragment管界面
  *
  */
-public abstract class FragmentContainerActivityAttacher extends SwipeBackActivityAttacher {
+public abstract class FragmentContainerActivity extends AyoSwipeBackActivity {
 
     /**
      * 这里能做的事：
@@ -39,6 +39,4 @@ public abstract class FragmentContainerActivityAttacher extends SwipeBackActivit
         initFragment(getSupportFragmentManager(), fl_root);
 
     }
-
-
 }

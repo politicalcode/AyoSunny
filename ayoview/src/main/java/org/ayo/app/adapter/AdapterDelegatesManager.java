@@ -22,7 +22,7 @@ import android.support.v4.util.SparseArrayCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import org.ayo.view.recycler.adapter.AyoViewHolder;
+import org.ayo.app.tmpl.recycler.adapter.AyoViewHolder;
 
 /**
  * This class is the element that ties {@link RecyclerView.Adapter} together with {@link

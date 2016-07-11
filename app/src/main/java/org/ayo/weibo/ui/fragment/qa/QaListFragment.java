@@ -2,10 +2,7 @@ package org.ayo.weibo.ui.fragment.qa;
 
 import android.view.View;
 
-import org.ayo.app.tmpl.AyoRecyclerViewFragment;
-import org.ayo.app.tmpl.Condition;
 import org.ayo.notify.Toaster;
-import org.ayo.view.recycler.SimpleRecyclerAdapter;
 import org.ayo.weibo.model.qa.QaSimple;
 import org.ayo.weibo.ui.adapter.QaAdapter;
 

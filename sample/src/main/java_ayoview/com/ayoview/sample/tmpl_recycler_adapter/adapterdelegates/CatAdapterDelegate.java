@@ -30,7 +30,6 @@ import com.ayoview.sample.tmpl_recycler_adapter.model.DisplayableItem;
 import com.cowthan.sample.R;
 
 import org.ayo.app.adapter.AdapterDelegate;
-import org.ayo.view.recycler.adapter.AyoViewHolder;
 
 import java.util.List;
 

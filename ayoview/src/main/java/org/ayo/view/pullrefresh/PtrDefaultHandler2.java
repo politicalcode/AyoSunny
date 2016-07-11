@@ -1,11 +1,10 @@
 package org.ayo.view.pullrefresh;
 
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ScrollView;
-
-import org.ayo.view.recycler.LinearLayoutManager;
 
 public abstract class PtrDefaultHandler2 extends PtrDefaultHandler implements PtrHandler2 {
 

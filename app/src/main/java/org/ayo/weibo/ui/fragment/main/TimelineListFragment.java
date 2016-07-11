@@ -2,9 +2,6 @@ package org.ayo.weibo.ui.fragment.main;
 
 import android.view.View;
 
-import org.ayo.app.tmpl.AyoRecyclerViewFragment;
-import org.ayo.app.tmpl.Condition;
-import org.ayo.app.tmpl.ErrorReason;
 import org.ayo.app.tmpl.pagegroup.ISubPage;
 import org.ayo.http.callback.BaseHttpCallback;
 import org.ayo.http.callback.model.ResponseModel;
@@ -13,7 +10,6 @@ import org.ayo.http.utils.HttpProblem;
 import org.ayo.jlog.JLog;
 import org.ayo.lang.Lang;
 import org.ayo.notify.Toaster;
-import org.ayo.view.recycler.SimpleRecyclerAdapter;
 import org.ayo.weibo.Config;
 import org.ayo.weibo.api3.ApiStatus;
 import org.ayo.weibo.model.timeline.AyoResponseTimeline;

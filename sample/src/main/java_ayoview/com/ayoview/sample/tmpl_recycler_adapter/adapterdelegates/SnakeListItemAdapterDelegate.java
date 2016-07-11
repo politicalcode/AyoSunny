@@ -13,7 +13,6 @@ import com.ayoview.sample.tmpl_recycler_adapter.model.Snake;
 import com.cowthan.sample.R;
 
 import org.ayo.app.adapter.AbsListItemAdapterDelegate;
-import org.ayo.view.recycler.adapter.AyoViewHolder;
 
 import java.util.List;
 

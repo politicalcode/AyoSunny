@@ -10,12 +10,9 @@ import com.ayoview.sample.tmpl_listview.http.TestOrder;
 import com.ayoview.sample.tmpl_listview.http.TestOrderList;
 import com.cowthan.sample.Utils;
 
-import org.ayo.app.tmpl.AyoRecyclerViewFragment;
-import org.ayo.app.tmpl.Condition;
 import org.ayo.http.callback.BaseHttpCallback;
 import org.ayo.http.callback.model.ResponseModel;
 import org.ayo.http.utils.HttpProblem;
-import org.ayo.view.recycler.SimpleRecyclerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -3,7 +3,7 @@ package com.ayoview.sample.tmpl_recyclerview;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 
-import org.ayo.app.common.FragmentContainerActivityAttacher;
+import org.ayo.app.tmpl.FragmentContainerActivityAttacher;
 
 /**
  * Created by Administrator on 2016/4/17.

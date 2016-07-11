@@ -2,15 +2,11 @@ package org.ayo.weibo.ui.fragment.top;
 
 import android.view.View;
 
-import org.ayo.app.tmpl.AyoRecyclerViewFragment;
-import org.ayo.app.tmpl.Condition;
-import org.ayo.app.tmpl.ErrorReason;
 import org.ayo.app.tmpl.pagegroup.ISubPage;
 import org.ayo.http.callback.BaseHttpCallback;
 import org.ayo.http.callback.model.ResponseModel;
 import org.ayo.http.utils.HttpProblem;
 import org.ayo.lang.Async;
-import org.ayo.view.recycler.SimpleRecyclerAdapter;
 import org.ayo.weibo.model.top.Top;
 import org.ayo.weibo.ui.adapter.TopAdapter;
 

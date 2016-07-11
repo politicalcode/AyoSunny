@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
 
-import org.ayo.app.tmpl.AyoWebViewFragment;
 import org.ayo.http.R;
 
 /**

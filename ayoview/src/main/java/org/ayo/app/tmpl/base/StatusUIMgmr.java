@@ -1,4 +1,4 @@
-package org.ayo.app;
+package org.ayo.app.tmpl.base;
 
 import android.content.Context;
 import android.view.View;
