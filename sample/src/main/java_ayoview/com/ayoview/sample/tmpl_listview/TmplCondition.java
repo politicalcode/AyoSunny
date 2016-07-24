@@ -1,21 +1,12 @@
 package com.ayoview.sample.tmpl_listview;
 
 
-public class TmplCondition extends Condition {
-	public int pageNow;
+import org.ayo.app.tmpl.recycler.tmpl.AyoListFragment;
 
-	@Override
-	public void onPullDown() {
-		pageNow = 0;
+public class TmplCondition extends AyoListFragment.AyoCondition {
+
+	public TmplCondition(int pageStart) {
+		super(pageStart);
 	}
 
-	@Override
-	public void onPullUp() {
-		pageNow += 1;
-	}
-
-	@Override
-	public void reset() {
-		pageNow = 0;
-	}
 }

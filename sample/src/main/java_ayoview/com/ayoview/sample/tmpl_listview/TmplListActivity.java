@@ -2,12 +2,12 @@ package com.ayoview.sample.tmpl_listview;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.view.View;
 
-import com.cowthan.sample.BaseActivity;
-import com.cowthan.sample.R;
+import org.ayo.app.tmpl.FragmentContainerActivityAttacher;
 
-public class TmplListActivity extends BaseActivity {
+public class TmplListActivity extends FragmentContainerActivityAttacher {
 	
 	public static void start(Context c, String p){
 		Intent i = new Intent(c, TmplListActivity.class);
@@ -18,14 +18,11 @@ public class TmplListActivity extends BaseActivity {
 	private TmplFragment fragment;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.ac_tmpl_activity_list);
-		
-		fragment = (TmplFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.fragment1);
-		fragment.loadOrderList();
-		
-		///如果activity中有能改变查询条件的控件，只需修改Condition，然后调用fragment.loadOrderList();
+	protected void initFragment(FragmentManager fragmentManager, View root) {
+		fragment = new TmplFragment(); // (TmplFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.fragment1);
+		fragment.isFirstPage(true);
+		fragmentManager.beginTransaction().replace(root.getId(), fragment).commit();
 	}
+
 
 }

@@ -1,9 +1,6 @@
 package org.ayo.app.tmpl.recycler.adapter;
 
 import android.app.Activity;
-import android.support.annotation.NonNull;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import org.ayo.app.tmpl.recycler.ItemBean;
@@ -20,6 +17,11 @@ public class GuardItemTemplate extends AyoItemTemplate2{
     }
 
     @Override
+    protected int getLayoutId() {
+        return R.layout.ayo_item_guard;
+    }
+
+    @Override
     public boolean isForViewType(ItemBean bean, int position) {
         return true;
     }
@@ -30,9 +32,4 @@ public class GuardItemTemplate extends AyoItemTemplate2{
         tv_info.setText(itemBean.getClass().getSimpleName() + "未注册样式模板");
     }
 
-    @NonNull
-    @Override
-    public AyoViewHolder onCreateViewHolder(ViewGroup parent) {
-        return new AyoViewHolder(View.inflate(mActivity, R.layout.ayo_item_guard, null));
-    }
 }

@@ -2,6 +2,7 @@ package org.ayo.app.tmpl.base;
 
 import android.content.Context;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.RelativeLayout;
 
 public class StatusUIMgmr {
@@ -38,7 +39,14 @@ public class StatusUIMgmr {
 	private StatusUIMgmr(View contentView, OnStatusViewAddedCallback callback){
 		this.contentView = contentView;
 		this.mContext = contentView.getContext();
-		this.container = (RelativeLayout) this.contentView.getParent();
+
+		ViewParent p = this.contentView.getParent();
+		if(p instanceof RelativeLayout){
+			this.container = (RelativeLayout) p;
+		}else{
+			throw new RuntimeException(contentView.getClass().getName() + "必须作为RelativeLayout的子元素");
+		}
+
 		this.callback = callback;
 	}
 	
@@ -134,6 +142,7 @@ public class StatusUIMgmr {
 		viewErrorOfServer.setVisibility(View.GONE);
 		viewLoading.setVisibility(View.GONE);
 		contentView.setVisibility(View.VISIBLE);
+		contentView.bringToFront();
 		currentShowingStatusView = null;
 	}
 }

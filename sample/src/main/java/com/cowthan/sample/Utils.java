@@ -3,6 +3,7 @@ package com.cowthan.sample;
 import android.content.Context;
 import android.util.DisplayMetrics;
 
+import org.ayo.app.tmpl.base.ErrorReason;
 import org.ayo.http.utils.HttpProblem;
 
 /**
