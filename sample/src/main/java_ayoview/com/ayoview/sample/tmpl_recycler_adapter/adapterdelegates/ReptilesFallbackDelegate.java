@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import com.cowthan.sample.R;
 
 import org.ayo.app.adapter.AbsFallbackAdapterDelegate;
-import org.ayo.view.recycler.adapter.AyoViewHolder;
 
 /**
  * @author Hannes Dorfmann

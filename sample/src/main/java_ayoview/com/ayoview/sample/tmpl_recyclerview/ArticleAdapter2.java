@@ -10,8 +10,6 @@ import com.ayoview.sample.tmpl_listview.TmplBean;
 import com.cowthan.sample.R;
 
 import org.ayo.imageloader.VanGogh;
-import org.ayo.view.recycler.adapter.AyoViewHolder;
-import org.ayo.view.recycler.SimpleRecyclerAdapter;
 
 import java.util.List;
 

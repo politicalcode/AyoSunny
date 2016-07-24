@@ -7,7 +7,7 @@ import android.view.View;
 import org.ayo.app.base.ActivityAttacher;
 import org.ayo.app.base.BundleManager;
 import org.ayo.app.base.SimpleBundle;
-import org.ayo.app.common.FragmentContainerActivityAttacher;
+import org.ayo.app.tmpl.FragmentContainerActivityAttacher;
 import org.ayo.weibo.ui.fragment.TimeLineDetailFragment;
 
 /**

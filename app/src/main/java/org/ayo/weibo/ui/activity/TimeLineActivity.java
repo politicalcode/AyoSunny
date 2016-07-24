@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.view.View;
 
 import org.ayo.app.base.ActivityAttacher;
-import org.ayo.app.common.FragmentContainerActivityAttacher;
+import org.ayo.app.tmpl.FragmentContainerActivityAttacher;
 import org.ayo.weibo.ui.fragment.TimelineListFragment2;
 
 

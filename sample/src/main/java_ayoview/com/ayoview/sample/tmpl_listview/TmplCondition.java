@@ -1,8 +1,6 @@
 package com.ayoview.sample.tmpl_listview;
 
 
-import org.ayo.app.tmpl.Condition;
-
 public class TmplCondition extends Condition {
 	public int pageNow;
 

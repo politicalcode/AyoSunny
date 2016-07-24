@@ -9,8 +9,6 @@ import android.widget.TextView;
 import org.ayo.http.R;
 import org.ayo.lang.Lang;
 import org.ayo.notify.Toaster;
-import org.ayo.view.recycler.adapter.AyoViewHolder;
-import org.ayo.view.recycler.SimpleRecyclerAdapter;
 import org.ayo.weibo.model.top.Top;
 import org.ayo.weibo.ui.fragment.TopDetailActivity;
 

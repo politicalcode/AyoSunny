@@ -1,7 +1,5 @@
 package com.ayoview.sample.tmpl_recyclerview;
 
-import org.ayo.app.tmpl.Condition;
-
 /**
  * Created by Administrator on 2016/4/17.
  */

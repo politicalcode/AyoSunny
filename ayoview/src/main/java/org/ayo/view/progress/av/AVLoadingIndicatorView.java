@@ -202,6 +202,18 @@ public class AVLoadingIndicatorView extends View{
         applyIndicator();
     }
 
+
+    public void setIndicatorId(int  indicatorId){
+        mIndicatorId = indicatorId;
+        applyIndicator();
+    }
+
+    public void setIndicatorColor(int color){
+        mIndicatorColor = color;
+        mPaint.setColor(mIndicatorColor);
+        this.invalidate();
+    }
+
     public void setIndicator(int id, int color){
         mPaint.setColor(mIndicatorColor);
         mIndicatorId = id;

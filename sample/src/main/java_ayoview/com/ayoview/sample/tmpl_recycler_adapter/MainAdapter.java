@@ -28,7 +28,6 @@ import com.ayoview.sample.tmpl_recycler_adapter.adapterdelegates.SnakeListItemAd
 import com.ayoview.sample.tmpl_recycler_adapter.model.DisplayableItem;
 
 import org.ayo.app.adapter.AdapterDelegatesManager;
-import org.ayo.view.recycler.adapter.AyoViewHolder;
 
 import java.util.List;
 

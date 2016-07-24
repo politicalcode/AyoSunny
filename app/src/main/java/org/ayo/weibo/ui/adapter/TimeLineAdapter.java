@@ -15,8 +15,6 @@ import com.facebook.drawee.view.SimpleDraweeView;
 
 import org.ayo.http.R;
 import org.ayo.lang.JsonUtils;
-import org.ayo.view.recycler.adapter.AyoViewHolder;
-import org.ayo.view.recycler.SimpleRecyclerAdapter;
 import org.ayo.weibo.App;
 import org.ayo.weibo.model.Timeline;
 import org.ayo.weibo.ui.activity.TimeLineDetailActivity;

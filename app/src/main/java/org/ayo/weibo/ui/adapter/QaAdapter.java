@@ -5,8 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.ayo.http.R;
-import org.ayo.view.recycler.adapter.AyoViewHolder;
-import org.ayo.view.recycler.SimpleRecyclerAdapter;
 import org.ayo.weibo.model.qa.QaSimple;
 
 import java.util.List;

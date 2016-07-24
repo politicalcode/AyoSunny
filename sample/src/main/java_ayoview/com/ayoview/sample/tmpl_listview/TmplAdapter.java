@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.cowthan.sample.R;
 
 import org.ayo.app.OnViewClickListener;
-import org.ayo.app.tmpl.BaseListAdapter;
 import org.ayo.imageloader.VanGogh;
 
 import java.util.List;
@@ -18,7 +17,7 @@ import java.util.List;
 /**
  * 文章列表适配器
  */
-public class TmplAdapter extends BaseListAdapter<TmplBean> {
+public class TmplAdapter extends org.ayo.app.SBSimpleAdapter<TmplBean> {
 
 	protected Context mContext;
 	protected OnViewClickListener<TmplBean> callback;

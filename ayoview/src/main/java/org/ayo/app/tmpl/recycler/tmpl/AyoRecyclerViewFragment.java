@@ -1,22 +1,23 @@
-package org.ayo.app.tmpl;
+package org.ayo.app.tmpl.recycler.tmpl;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import org.ayo.app.LocalDisplay;
-import org.ayo.app.StatusUIMgmr;
-import org.ayo.view.pullrefresh.PtrClassicDefaultFooter;
-import org.ayo.view.pullrefresh.PtrDefaultHandler2;
-import org.ayo.view.pullrefresh.PtrFrameLayout;
-import org.ayo.view.pullrefresh.header.MaterialHeader;
-import org.ayo.view.recycler.LinearLayoutManager;
-import org.ayo.view.recycler.SimpleRecyclerAdapter;
+import org.ayo.app.tmpl.base.StatusUIMgmr;
+import org.ayo.app.tmpl.base.Condition;
+import org.ayo.app.tmpl.base.ErrorReason;
+import org.ayo.app.tmpl.recycler.adapter.AyoRecyclerAdapter;
+import org.ayo.view.recycler.XRecyclerView;
 
 import java.util.Collection;
 import java.util.List;
@@ -28,33 +29,54 @@ import genius.android.view.R;
 public abstract class AyoRecyclerViewFragment<T> extends Fragment {
 
     private View root = null;
-    PtrFrameLayout mPtrFrameLayout;
-    RecyclerView mRecyclerView;
-    protected SimpleRecyclerAdapter<T> mAdapter;
+    protected XRecyclerView mXRecyclerView;
+    protected AyoRecyclerAdapter<T> mAdapter;
     protected List<T> list;
 
+    //样式和加载
     protected RecyclerView.LayoutManager getLayoutManager(){
         return new LinearLayoutManager(getActivity());
     }
-    protected abstract SimpleRecyclerAdapter<T> newAdapter();
-    protected abstract void onRefresh();
-    protected abstract void onLoadMore();
-    protected abstract void onCreateViewFinished(View root);
+    protected abstract AyoRecyclerAdapter<T> newAdapter();
+    public abstract Condition initCondition();
+    protected abstract void onRefresh(Condition cond);
+    protected abstract void onLoadMore(Condition cond);
+    /**
+     * 可以在这里跟XRecclerView添加header，滚动监听等
+     * @param root
+     * @param mXRecyclerView
+     */
+    protected abstract void onCreateViewFinished(View root, XRecyclerView mXRecyclerView);
+
+    //状态通知
+    public abstract void notifyError(boolean isUIChanged, int reason);
+    public abstract void notifyNotAnyMore();
+
+    //状态切换
+
+    /**
+     * 应该返回4个布局，按顺序是：loading，数据空，本地发生错误，服务器发生错误
+     * 如果返回null，必须null，则使用默认样式
+     * @return
+     */
+    public abstract int[] getStatusLayoutId();
+    public abstract StatusUIMgmr.OnStatusViewAddedCallback getStatusCallback();
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LocalDisplay.init(getActivity());
-        root = View.inflate(getActivity(), R.layout.ayo_tmpl_frag_recycler, null);
-        mPtrFrameLayout = (PtrFrameLayout) root.findViewById(R.id.ptr_frame);
+        root = View.inflate(getActivity(), R.layout.ayo_tmpl_frag_recycler_x, null);
+        mXRecyclerView = (XRecyclerView) root.findViewById(R.id.ptr_frame);
 
         mHandler = new Handler();
         initRecyclerView();
-        initPtrFrameLayout();
-        initStatusManager(mPtrFrameLayout, callback);
+        initXRecyclerView();
+        initStatusManager();
         condition = initCondition();
 
-       onCreateViewFinished(root);
+        onCreateViewFinished(root, mXRecyclerView);
 
         return root;
     }
@@ -68,16 +90,16 @@ public abstract class AyoRecyclerViewFragment<T> extends Fragment {
     }
 
     private void initRecyclerView() {
-        mRecyclerView = (RecyclerView) root.findViewById(R.id.recyclerview);
+        mXRecyclerView = (XRecyclerView) root.findViewById(R.id.ptr_frame);
         //使RecyclerView保持固定的大小,这样会提高RecyclerView的性能
-        mRecyclerView.setHasFixedSize(true);
+        mXRecyclerView.setHasFixedSize(true);
         //设置LayoutManager
         RecyclerView.LayoutManager layoutManager = getLayoutManager();
-        mRecyclerView.setLayoutManager(layoutManager);
+        mXRecyclerView.setLayoutManager(layoutManager);
 
         //设置Adapter
         mAdapter = newAdapter();
-        mRecyclerView.setAdapter(mAdapter);
+        mXRecyclerView.setAdapter(mAdapter);
 
         //adapter刷新列表的方法
         /*
@@ -92,64 +114,38 @@ public abstract class AyoRecyclerViewFragment<T> extends Fragment {
          */
     }
 
-    private void initPtrFrameLayout() {
-        // header
-        final MaterialHeader header = new MaterialHeader(getContext());
-        int[] colors = getResources().getIntArray(R.array.google_colors);
-        header.setColorSchemeColors(colors);
-        header.setLayoutParams(new PtrFrameLayout.LayoutParams(-1, -2));
-        header.setPadding(0, LocalDisplay.dp2px(15), 0, LocalDisplay.dp2px(10));
-        header.setPtrFrameLayout(mPtrFrameLayout);
+    protected void onRefreshX(Condition c){ onRefresh(c); }
+    private void onLoadMoreX(Condition c){ onLoadMore(c);}
 
-        mPtrFrameLayout.setLoadingMinTime(1000);
-        mPtrFrameLayout.setDurationToCloseHeader(1500);
-        mPtrFrameLayout.setHeaderView(header);
-        mPtrFrameLayout.addPtrUIHandler(header);
+    private void initXRecyclerView() {
 
-        final PtrClassicDefaultFooter footer = new PtrClassicDefaultFooter(getContext());
-        mPtrFrameLayout.setFooterView(footer);
-        mPtrFrameLayout.addPtrUIHandler(footer);
-
-        //如果不设置这句，上拉加载完不会直接看到加载到的数据，而要有个下滑动作，再往上滑才能看到
-        mPtrFrameLayout.setForceBackWhenComplete(true);
-
-        mPtrFrameLayout.setResistance(1.7f);
-        mPtrFrameLayout.setRatioOfHeaderHeightToRefresh(1.2f);
-        mPtrFrameLayout.setDurationToClose(200);
-        mPtrFrameLayout.setDurationToCloseHeader(1000);
-        // default is false
-        mPtrFrameLayout.setPullToRefresh(false);
-
-//        mPtrFrameLayout.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                mPtrFrameLayout.autoRefresh(false);
-//            }
-//        }, 100);
-
-        mPtrFrameLayout.setPtrHandler(new PtrDefaultHandler2() {
-
+        mXRecyclerView.setLoadingListener(new XRecyclerView.LoadingListener() {
             @Override
-            public void onRefreshBegin(final PtrFrameLayout frame) {
+            public void onRefresh() {
                 isLoadMore = false;
-                onRefresh();
+                condition.onPullDown();
+                onRefreshX(condition);
             }
 
             @Override
-            public void onLoadMoreBegin(final PtrFrameLayout frame) {
+            public void onLoadMore() {
                 isLoadMore = true;
-                onLoadMore();
+                condition.onPullUp();
+                Log.i("dd0", "onLoadMore--raw");
+                onLoadMoreX(condition);
             }
-
-
         });
-
     }
 
 
     public void stopRefreshOrLoadMore(){
         try{
-            mPtrFrameLayout.refreshComplete();
+            if(isLoadMore){
+                mXRecyclerView.loadMoreComplete();
+            }else{
+                mXRecyclerView.refreshComplete();
+            }
+
         }catch (Exception e){
 
         }
@@ -160,15 +156,21 @@ public abstract class AyoRecyclerViewFragment<T> extends Fragment {
     private StatusUIMgmr statusMgmr;
     protected Handler mHandler;
 
-    protected void initStatusManager(PtrFrameLayout ptrFrameLayout, StatusUIMgmr.OnStatusViewAddedCallback callback){
+    protected void initStatusManager(){
         ///状态切换
-        if(callback == null){
-            callback = this.callback;
+        int[] lays = getStatusLayoutId();
+        if(lays == null){
+            lays = new int[]{R.layout.genius_view_loading, R.layout.genius_view_empty, R.layout.genius_view_error_local, R.layout.genius_view_error_server};
+        }else{
+            if(lays.length != 4){
+                throw new RuntimeException("必须返回4个布局，顺序是loading，empty，local error, serve error");
+            }
         }
-        statusMgmr = StatusUIMgmr.attach(mPtrFrameLayout, callback);
-        statusMgmr.setEmptyLayout(R.layout.genius_view_empty);
-        statusMgmr.setErrorLayout(R.layout.genius_view_error_local, R.layout.genius_view_error_server);
-        statusMgmr.setLoadingLayout(R.layout.genius_view_loading);
+
+        statusMgmr = StatusUIMgmr.attach(mXRecyclerView, getStatusCallback() == null ? callback: getStatusCallback());
+        statusMgmr.setLoadingLayout(lays[0]);
+        statusMgmr.setEmptyLayout(lays[1]);
+        statusMgmr.setErrorLayout(lays[2], lays[3]);
 
     }
 
@@ -189,6 +191,7 @@ public abstract class AyoRecyclerViewFragment<T> extends Fragment {
     };
 
     public void onLoadFinish(){
+        if(mHandler == null) mHandler = new Handler(Looper.getMainLooper());
         mHandler.postDelayed(new Runnable() {
 
             @Override
@@ -197,6 +200,9 @@ public abstract class AyoRecyclerViewFragment<T> extends Fragment {
             }
         }, 200);
     }
+
+
+
 
     /**
      * 错误提示：
@@ -207,9 +213,10 @@ public abstract class AyoRecyclerViewFragment<T> extends Fragment {
      */
     public void onLoadFail(int reason, boolean forceChageUI){
         onLoadFinish();
-        if((list == null || list.size() == 0 )&& !forceChageUI){
+        if(!(list == null || list.size() == 0 ) && !forceChageUI){
             //界面不是空，也不强制切换UI，则什么都不干
             //Toaster.toastLong(errorInfo);
+            notifyError(false, reason);
         }else{
             if(reason == ErrorReason.LOCAL){
                 statusMgmr.showErrorOfLocal();
@@ -218,17 +225,21 @@ public abstract class AyoRecyclerViewFragment<T> extends Fragment {
             }else{
                 statusMgmr.showErrorOfServer();
             }
+            notifyError(true, reason);
         }
     }
 
-    public abstract void onNotAnyMore();
+    public void onLoading(){
+        statusMgmr.showLoading();
+    }
+
 
     public void onLoadOk(List<T> data){
         onLoadFinish();
         if(isLoadMore && isEmpty(data)){
             ///没有更多页了，并且这一页也是空
             //Toaster.toastLong("没有下一页了");
-            onNotAnyMore();
+            notifyNotAnyMore();
             return;
         }
 
@@ -249,17 +260,20 @@ public abstract class AyoRecyclerViewFragment<T> extends Fragment {
     }
 
     public void autoRefresh(){
-        mPtrFrameLayout.postDelayed(new Runnable() {
+        Log.i("ayo ecy view fragm", mXRecyclerView.getTop() + ", " + mXRecyclerView.getScrollY() + ", " + mXRecyclerView.getLayoutManager().getHeight());
+        //mXRecyclerView.scrollBy(0, -mXRecyclerView.getTop());
+        mXRecyclerView.scrollToPosition(0);
+        mXRecyclerView.postDelayed(new Runnable() {
             @Override
             public void run() {
-                mPtrFrameLayout.autoRefresh(false);
+                mXRecyclerView.setRefresh();
             }
         }, 100);
     }
 
     private Condition condition;
 
-    public abstract Condition initCondition();
+
 
     public Condition getCondition(){
         return this.condition;

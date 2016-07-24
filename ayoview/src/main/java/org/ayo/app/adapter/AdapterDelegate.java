@@ -20,7 +20,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import org.ayo.view.recycler.adapter.AyoViewHolder;
+import org.ayo.app.tmpl.recycler.adapter.AyoViewHolder;
 
 /**
  * This delegate provide method to hook in this delegate to {@link RecyclerView.Adapter} lifecycle.

@@ -9,9 +9,6 @@ import com.cowthan.sample.R;
 import com.cowthan.sample.Utils;
 
 import org.ayo.Configer;
-import org.ayo.app.tmpl.BaseListAdapter;
-import org.ayo.app.tmpl.BaseListViewFragment;
-import org.ayo.app.tmpl.Condition;
 import org.ayo.http.callback.BaseHttpCallback;
 import org.ayo.http.callback.model.ResponseModel;
 import org.ayo.http.utils.HttpProblem;
