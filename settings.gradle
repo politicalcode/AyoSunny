@@ -1,4 +1,4 @@
-include ':app', ':weibosdk', ':ayohttp', ':ayosdk', ':eventbus', ':ayoask',
+include ':app', ':weibosdk', ':ayohttp', ':ayosdk', ':eventbus', ':ayoask', ':imtest', ':qq',
         ':ayoimageloader', ':ayoview', ':sample', ':ayodatabase',
         ':umeng', ':mediachooser', ':ayoimage_sample', ':rxjavasample',
         ':vedio-player-manager'

@@ -12,7 +12,9 @@
       <module fileurl="file://$PROJECT_DIR$/ayosdk/ayosdk.iml" filepath="$PROJECT_DIR$/ayosdk/ayosdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/ayoview/ayoview.iml" filepath="$PROJECT_DIR$/ayoview/ayoview.iml" />
       <module fileurl="file://$PROJECT_DIR$/eventbus/eventbus.iml" filepath="$PROJECT_DIR$/eventbus/eventbus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imtest/imtest.iml" filepath="$PROJECT_DIR$/imtest/imtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/mediachooser/mediachooser.iml" filepath="$PROJECT_DIR$/mediachooser/mediachooser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qq/qq.iml" filepath="$PROJECT_DIR$/qq/qq.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxjavasample/rxjavasample.iml" filepath="$PROJECT_DIR$/rxjavasample/rxjavasample.iml" />
       <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/umeng/umeng.iml" filepath="$PROJECT_DIR$/umeng/umeng.iml" />
