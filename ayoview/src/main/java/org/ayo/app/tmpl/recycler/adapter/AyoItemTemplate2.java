@@ -2,6 +2,8 @@ package org.ayo.app.tmpl.recycler.adapter;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
+import android.view.View;
+import android.view.ViewGroup;
 
 import org.ayo.app.adapter.AdapterDelegate;
 import org.ayo.app.tmpl.recycler.ItemBean;
@@ -47,6 +49,16 @@ public abstract class AyoItemTemplate2 implements AdapterDelegate<List<ItemBean>
     @Override
     public void onBindViewHolder(@NonNull List<ItemBean> items, int position, @NonNull AyoViewHolder holder) {
         onBindViewHolder(items.get(position), position, holder);
+    }
+
+    protected abstract int getLayoutId();
+
+    @NonNull
+    @Override
+    public AyoViewHolder onCreateViewHolder(ViewGroup parent) {
+        View v = View.inflate(mActivity, getLayoutId(), null);
+        AyoViewHolder h = new AyoViewHolder(v);
+        return h;
     }
 
     //protected int getLayoutId();

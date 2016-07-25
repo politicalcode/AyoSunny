@@ -3,10 +3,8 @@ package com.ayo.sample.zdatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.ayoview.sample.tmpl_listview.TmplAdapter;
 import com.ayoview.sample.tmpl_listview.TmplBean;
 import com.cowthan.sample.BaseActivity;
 import com.cowthan.sample.R;
@@ -151,9 +149,9 @@ public class XUtilsDBDemoActivity extends BaseActivity implements OnViewClickLis
             List<Emp> list = db.selector(Emp.class).findAll();
             if(Lang.isEmpty(list)){
                 Toaster.toastShort("没数据");
-                TmplAdapter adapter = new TmplAdapter(getActivity(), null, this);
-                ListView lv_list = findViewById(R.id.lv_list);
-                lv_list.setAdapter(adapter);
+//                TmplAdapter adapter = new TmplAdapter(getActivity(), null, this);
+//                ListView lv_list = findViewById(R.id.lv_list);
+//                lv_list.setAdapter(adapter);
 
             }else{
                 List<TmplBean> ts = new ArrayList<TmplBean>();
@@ -162,9 +160,10 @@ public class XUtilsDBDemoActivity extends BaseActivity implements OnViewClickLis
                     t.title = e.name;
                     ts.add(t);
                 }
-                TmplAdapter adapter = new TmplAdapter(getActivity(), ts, this);
-                ListView lv_list = findViewById(R.id.lv_list);
-                lv_list.setAdapter(adapter);
+                Toaster.toastShort( ts.size() + "条数据");
+//                TmplAdapter adapter = new TmplAdapter(getActivity(), ts, this);
+//                ListView lv_list = findViewById(R.id.lv_list);
+//                lv_list.setAdapter(adapter);
             }
 
 

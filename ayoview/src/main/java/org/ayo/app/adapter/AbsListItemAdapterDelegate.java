@@ -4,6 +4,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
+import org.ayo.app.tmpl.recycler.adapter.AyoViewHolder;
+
 import java.util.List;
 
 /**
