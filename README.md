@@ -1,48 +1,19 @@
-Ayo2016
+AyoSunny
 ========================
 
 ##前言：这是什么
 
+* AyoSunny，哎呦我日，包含：
+    * AyoSdk：常用工具类
+    * AyoViewLib：控件库
+    * Log，ImageLoad，Http，EventBus，DB，Inject，Json & xml，Log，IO，Thread，Cache，Crypt等常用模块的封装及研究
+    * 一堆尽量保持与时俱进的第三方库demo及分析，牛人博客拜读和整合。。。。
+    * 面儿相当广，每个知识点分析的都特别深
+    * 面面俱到的文档，用时，查的快，学时，懂的深
+    * 从不满足于浅尝辄止，从不说会用就行，千言万语汇成一句，得搞透
+    * 每个模块都做到完全模块化，常用功能放入AyoSdk或者AyoViewLib，不常用的直接扔到sample里
+    * 本版本力求做到更加简洁，更加模块化，以轻量级可配置化的姿态重新进入技术界
 
-##如何往项目里添加你的代码
-
-* 分2步：
-    * 配置你的个人页入口：在Config类中搜`菜单1：笔记`，配置你自己的page和菜单列表
-    * 开始写你的代码
-        * 如果要使用Activity代理框架，请移步：[Activity代理框架](./doc/doc-ayoview-acagent.md)
-        * 如果不想用Activity代理框架，请参考org.ayo.app.orig
-        * 如果都不感兴趣，直接写你的Activity就行
-
-
-####
-__注册你的个人目录__
-```java
-sourceSets {
-    main {
-        jniLibs.srcDirs = ['libs']
-        java.srcDirs = ['src/main/java',
-                        'src/main/java_ayosdk',
-                        'src/main/java_ayoview',
-                        'src/main/java_issues',
-                        'src/main/java_opensource',
-                        'src/main/java_seven',
-                        'src/main/java_snowy',
-                        'src/main/lib_particle']
-    }
-```
-
-####
-* 务必注意：
-    * 写之前先过一遍现有的库，避免重复引入，省的干重复的事
-    * 尽量给个文档，文档目录在README.md
-	* 图片都放在七牛的本人账号下，空间cowthan1103，域名```http://7xo0ny.com1.z0.glb.clouddn.com/```
-
-
-####
-* 日程安排
-    * 2016.03.28 完善ui lib
-	
-	
 	
 ##目录
 
