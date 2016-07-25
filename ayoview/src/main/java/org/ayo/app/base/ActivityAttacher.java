@@ -34,9 +34,9 @@ import java.io.Serializable;
  *
  * Created by Administrator on 2016/1/19.
  */
-public abstract class ActivityAttacher implements Serializable{
+public abstract class ActivityAttacher implements Serializable {
 
-    public abstract class OnResultCallBack implements Serializable{
+    public static abstract class OnResultCallBack implements Serializable{
         public abstract void onResult(Object t);
     }
 
@@ -47,6 +47,10 @@ public abstract class ActivityAttacher implements Serializable{
 
     public static void startActivity(Context context, Class<? extends ActivityAttacher> attacherClazz, OnResultCallBack onResultCallBack){
         startActivity(context, attacherClazz, SimpleBundle.EMPTY, false, LAUNCH_MODE_STANDARD, onResultCallBack);
+    }
+
+    public static void startActivity(Context context, Class<? extends ActivityAttacher> attacherClazz, SimpleBundle sb){
+        startActivity(context, attacherClazz, sb, false, LAUNCH_MODE_STANDARD, null);
     }
 
     public static void startActivity(Context context, Class<? extends ActivityAttacher> attacherClazz){
@@ -107,7 +111,6 @@ public abstract class ActivityAttacher implements Serializable{
     }
 
 
-
     private TmplBaseActivity activity;
 
     public void attach(TmplBaseActivity activity){
@@ -122,6 +125,9 @@ public abstract class ActivityAttacher implements Serializable{
         return this.activity.getSupportFragmentManager();
     }
 
+    public <T> T id(int id){
+        return (T) findViewById(id);
+    }
 
     protected OnResultCallBack getResultCallback(){
         if(getIntent().hasExtra("callback1122334")){

@@ -20,14 +20,6 @@ AyoSunny
 * 基础设施:
     * [Ayo库怎么用](./doc/doc-doc.md)
     * [常用工具类](./doc/doc-common.md)
-	* [Activity免声明框架：AyoActivity，多模块开发]
-	    * [安卓Activity，Fragment基础教程]
-	    * [Activity状态保存](./doc/doc-state.md)
-	    * [AyoActivity思路和教程]
-		* [和Fragment的配合: getActivity()得不到attacher问题解决]
-		* [多模块开发研究--加载，资源文件的加载]
-		* [插件化发布研究]
-		* [热补丁]
     * [控件注入](./doc/doc-inject.md)
         * [ButterKnife研究]
         * [dagger研究]
@@ -43,12 +35,10 @@ AyoSunny
 		* [流：Okio]
     * [http请求](./doc/doc-http.md)
 	    * [AyoHttp框架]
-		* [底层：UrlConnection，OKHttp]
+		* [UrlConnection，OKHttp]
 		* [XUtils：http请求，下载文件，上传文件]
         * [Volly教程和源码解析](./doc/doc-volly.md)
 	    * [retrofit教程和源码解析]
-	    * [webview参考手册，js桥]
-	    * [react-native研究]
 	* [json解析]
 	    * [原生json和泛型问题]
 		* [Bean嵌套，Map，List，"1,2,3,4"的解析]
@@ -64,6 +54,7 @@ AyoSunny
 	    * [UniversalImageDownloader]
 		* [Fresco]
 	    * [Picasso]
+	    * [Glide]
     * [多线程](./doc/doc-async.md)
 		* [安卓消息队列机制]
 	    * [java多线程]
@@ -89,11 +80,9 @@ AyoSunny
     * [推送]
         * [mqtt：自己搭个服务器，自己封装sdk]
         * [极光等第三方推送]
-
     * [binder]
         * [binder机制]
         * [aidl:http://android.blog.51cto.com/268543/537684/]
-
     * [IM通信]
         * [openfire]
         * [蘑菇街开源IM框架]
@@ -104,11 +93,13 @@ AyoSunny
         * [拦截短信]
         * [解锁屏幕，保持屏幕点亮等]
         * [各种广播receiver]
-
+    * [多模块开发研究--加载，资源文件的加载]
+        * [插件化发布研究]
+        * [热补丁]
 
 ####
 * UIFramework：控件
-    * [Activity]
+    * [Activity研究]
         * 生命周期
         * onSaveInstance
         * 连续打开多个Activity
@@ -118,6 +109,7 @@ AyoSunny
         * manifest配置研究
         * 主题研究
     * [Fragment应用及其通信](./doc/v_fragment.md)
+    * [Activity免声明框架：ActivityAttacher]
     * [状态栏控制](./doc/README-ayo.md)
     * [Drawable系列](./doc/v_drawable.md)
     * [TextView系列](./doc/v_textview.md)
